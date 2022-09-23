@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CFARS Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="../css/custom.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="./form-style.css">
+</head>
+<body>
+  <div class="treatment-plan">
+
+    <div class="content">
+        <div class="flex-div">
+            <div class="col-item">
+                <div class="logo"><a href="#"><img
+                            src="{{asset('assets/dashboard/template/')}}/logo4.png"
+                            alt=""></a></div>
+            </div>
+            <div class="col-item">
+              <div class="info-details">
+                <ul>
+                  <li> <span>Mail:</span>demo@example.com</li>
+                  <li><a href="#"> <span>Email:</span>demo@example.com</a></li>
+                  <li><span>Phone:</span> 000-000-0000</li>
+                  <li><a href="#"><span>Fax:</span>000.000.0000</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+
+        <!-- headers -->
+        <form action="" method="POST" id="form_36">
+            @csrf
+            <input type="hidden" name="sessionid" value="{{ $session_id }}">
+            <div class="page-title mb_40">
+              <h1>MEDICATION FLOWSHEET</h1>
+            </div>
+            <div class="top-part">
+              <table cellpadding="0" cellspacing="0" class="extra">
+                <tbody>
+                  <tr>
+                    <td colspan="8" ><label>Patient Name:</label>
+                      <input type="text" class="w-100" name="patient_name" placeholder="Enter Here...">
+                    </td>
+                    <td><label>Allergies:</label>
+                      <input type="text" class="w-100" name="allergies" placeholder="Enter Here...">
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td colspan="2"><label>DATE</label>
+                    </td>
+                    <td colspan="3"><label>MEDICATION</label>
+                    </td>
+                    <td colspan="4"><label>REFILLS</label>
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td><label>Start</label>
+                    </td>
+                    <td><label>Stop</label>
+                    </td>
+                    <td colspan="3"><label>Dosage/Direction/Amount</label>
+                    </td>
+                    <td colspan="4"><label>Date/Amount/Initials</label>
+                    </td>
+                  </tr>
+                  <tr class="text-center">
+                    <td><input type="date" name="date">
+                    </td>
+                    <td><input type="date" name="date_1">
+                    </td>
+                    <td colspan="3"><input type="text" class="w-100" name="dosage" placeholder="Enter Here...">
+                    </td>
+                    <td><input type="date" name="date_2"></td>
+                    <td> <input type="number" name="amount" placeholder="Enter Amount..."></td>
+                    <td colspan="2"><input type="text" class="w-100" name="initials" placeholder="Enter Initials here..."> </td>
+                
+                  </tr>
+                  <tr class="text-center">
+                    <td><input type="date" name="date_3">
+                    </td>
+                    <td><input type="date" name="date__4">
+                    </td>
+                    <td colspan="3"><input type="text" class="w-100" name="dosage_1" placeholder="Enter Here...">
+                    </td>
+                    <td><input type="date" name="date_5"></td>
+                    <td> <input type="number" name="amount_1" placeholder="Enter Amount..."></td>
+                    <td colspan="2"><input type="text" class="w-100" name="initials_1" placeholder="Enter Initials here..."> </td>
+                
+                  </tr>
+                  <tr class="text-center">
+                    <td><input type="date" name="date_6">
+                    </td>
+                    <td><input type="date" name="date_7">
+                    </td>
+                    <td colspan="3"><input type="text" class="w-100" name="dosage_2" placeholder="Enter Here...">
+                    </td>
+                    <td><input type="date" name="date_8"></td>
+                    <td> <input type="number" name="amount_2" placeholder="Enter Amount..."></td>
+                    <td colspan="2"><input type="text" class="w-100" name="initials_2" placeholder="Enter Initials here..."> </td>
+                
+                  </tr>
+              
+                </tbody>
+              </table>
+            </div>
+    
+            <a href="#" data-target="#signatureModal" data-toggle="modal">Add Signature<i class="fa fa-signature"></i></a>
+    
+            <div class="section_bottom">
+              <div class="button-row flex-div">
+                <div class="save-prog"><button type="submit"><span class="cloud-icon"><i class="fas fa-cloud"></i></span>
+                    Save</button></div>
+                <div class="print"><button type="button"><span class="print-icon"><i
+                        class="fas fa-print"></i></span>Print</button>
+                </div>
+              </div>
+            </div>
+    
+            <div class="modal fade" id="signatureModal" data-backdrop="static">
+              <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4>Add signature</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#drawsig">Draw</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#uploadsig">Upload</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active" id="drawsig">
+                        <div class="row mb-2">
+                          <div class="col-md-12">
+                            <canvas id="sig-canvas" height="120" style="width: 100%;"></canvas>
+                          </div>
+                          <input type="hidden" class="form-control-file sing_draw"
+                          name="sing_draw">
+                        </div>
+                        <button type="button" class="btn btn-danger p-2" id="sig-clearBtn">Clear</button>
+                      </div>
+                      <div class="tab-pane fade" id="uploadsig">
+                        <label>Upload File</label>
+                        <input type="file" class="form-control-file" name="updload_sign">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Add
+                    Signature
+                    </button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <!-- signature modal caregiver -->
+            <div class="modal fade" id="signatureModal2" data-backdrop="static">
+              <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4>Add signature</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#drawsig2">Draw</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#uploadsig2">Upload</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active" id="drawsig2">
+                        <div class="row mb-2">
+                          <div class="col-md-12">
+                            <canvas id="sig-canvas2" height="120" style="width: 100%;"></canvas>
+                          </div>
+                          <input type="hidden" class="form-control-file sing_draw2"
+                          name="sing_draw2">
+                        </div>
+                        <button type="button" class="btn btn-danger p-2" id="sig-clearBtn2">Clear</button>
+                      </div>
+                      <div class="tab-pane fade" id="uploadsig2">
+                        <label>Upload File</label>
+                        <input type="file" class="form-control-file" name="updload_sign2">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Add
+                    Signature
+                    </button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            @csrf
+            </form>
+
+
+
+
+
+
+            <div class="footer-section">
+            <div class="flex-div">
+              <div class="col-item">
+                <p><strong>Demo Institution</strong> somewhere in america</p>
+              </div>
+              <div class="col-item">
+                <p> <a href="tel:000-000-0000">Phone: 000-000-0000,</a> &nbsp;<a href="mailto:">
+                    <span>Email:</span> demo@example.com,</a>&nbsp; <a href="fax:000.000.0000"> Fax:
+                    000.000.0000,</a>&nbsp; <a href="https://example.com/">example.com</a> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+         
+        </div>
+         
+      </div>
+      
+    </div>
+</div>
+  <!--/ signature modal -->
+  <!-- Jq Files -->
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <!-- Signature -->
+
+</body>
+</html>

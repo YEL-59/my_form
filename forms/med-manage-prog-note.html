@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medication Management Progress Note</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="./form-style.css">
+</head>
+
+<body>
+  <div class="treatment-plan">
+    <div class="content">
+      <!-- headers -->
+      <div class="flex-div">
+        <div class="col-item">
+          <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+        </div>
+        <div class="col-item">
+          <div class="info-details">
+            <ul>
+              <li> <span>Mail:</span>4001 Stableglen DR Rockwall, TX 75032</li>
+              <li><a href="mailto:info@amrextherapypm.com"> <span>Email:</span>info@amrextherapypm.com</a>
+              </li>
+              <li><span>Phone:</span> (469) 215-1101</li>
+              <li><a href="fax:732-276-9878"><span>Fax:</span>732-276-9878</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- headers -->
+
+      <form action="" method="POST" id="form_46">
+        @csrf
+        <input type="hidden" name="sessionid" value="{{ $session_id }}">
+
+
+        <div class="page-title mb_40">
+          <h1>Medication Management Progress Note</h1>
+        </div>
+        <div class="top-part">
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td colspan="2"><label>Client: <input type="text" name="client" placeholder="Enter Here..."></label></td>
+                <td><label>Client MR#: <input type="text" name="client_mr" placeholder="Enter Here..."></label></td>
+                <td><label>Age: <input type="text" name="age" placeholder="Enter Here..."></label></td>
+                <td><label>Diagnosis: <input type="text" name="diagnosis" placeholder="Enter Here..."></label></td>
+              </tr>
+              <tr>
+                <td><label>Date: <input type="date" name="date"></label></td>
+                <td><label>Staff: <input type="text" name="staff" placeholder="Enter Here..."></label></td>
+                <td><label>Billing Code: <input type="text" name="billing_code" placeholder="Enter Here..."></label></td>
+                <td><label>Time In: <input type="time" name="time_in"></label></td>
+                <td><label>Time Out: <input type="time" name="time_out"></label></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <label>A. Chief Complaint (reason for visit): </label>
+          <div>
+            <textarea name="ro_visit" class="form-control border border-primary" placeholder="Enter Here..."></textarea>
+          </div>
+        </div>
+        <div class="top-part">
+          <label>B. History of Present Illness: (Describe location, duration, severity, context, associated signs,
+            quality, modifying factors, medications) </label>
+          <div>
+            <textarea name="hop_illness" class="form-control border border-primary" placeholder="Enter Here..."></textarea>
+          </div>
+        </div>
+        <div class="top-part">
+          <label>B. History of Present Illness: (Describe location, duration, severity, context, associated signs,
+            quality, modifying factors, medications) </label>
+          <div>
+            <textarea name="hop_illness_1" class="form-control border border-primary" placeholder="Enter Here..."></textarea>
+          </div>
+        </div>
+        <div class="top-part">
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td><label>ROS: </label></td>
+                <td><label>Systemic </label></td>
+                <td><label>ENT </label></td>
+                <td><label>Eyes </label></td>
+                <td><label>Lymph </label></td>
+                <td><label>Resp </label></td>
+                <td><label>CV </label></td>
+                <td><label>GI </label></td>
+                <td><label>GU </label></td>
+                <td><label>Skin </label></td>
+                <td><label>MS </label></td>
+                <td><label>Endo </label></td>
+                <td><label>Neuro </label></td>
+                <td><label>Psych </label></td>
+                <td><label>Allergy </label></td>
+              </tr>
+              <tr>
+                <td><label>+</label></td>
+                <td><label><input type="text" placeholder="..."> </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label> <input type="text" placeholder="..."> </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label> <input type="text" placeholder="..."> </label></td>
+                <td><label> <input type="text" placeholder="..."> </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label> <input type="text" placeholder="..."> </label></td>
+                <td><label> <input type="text" placeholder="..."> </label></td>
+                <td><label> <input type="text" placeholder="..."> </label></td>
+                <td><label> <input type="text" placeholder="..."> </label></td>
+              </tr>
+              <tr>
+                <td><label>-</label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label> <input type="text" placeholder="..."> </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label> <input type="text" placeholder="..."> </label></td>
+                <td><label> <input type="text" placeholder="..."> </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label><input type="text" placeholder="..."> </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label><input type="text" placeholder="...">  </label></td>
+                <td><label> <input type="text" placeholder="..."> </label></td>
+              </tr>
+
+
+            </tbody>
+          </table>
+          <div class="d-flex justify-content-between border border-primary border-top-0 pt-4 pb-4">
+            <td><label>Explain Positive Responses: <input type="text" name="ep_responses" placeholder="Enter Here..."></label></td>
+            <td><label># of Systems reviewed:<input type="text" name="os_reviewed" class="border-primary border-bottom"></label></td>
+          </div>
+        </div>
+        <div class="top-part">
+          <label>E. Past, Family, Social History: </label>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn">Reviewed PH
+            </label>
+          </div>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_1">Reviewed FH
+            </label>
+          </div>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_2">Reviewed SH
+            </label>
+          </div>
+          <p class="pt-3"> Since last visit, are there:</p>
+          <div>
+            <label>Changes in PH: </label>
+            <div class="form-check-inline ">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="yn_3">Yes
+              </label>
+            </div>
+            <div class="form-check-inline ">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="yn_4">Yes
+              </label>
+            </div>
+          </div>
+          <div>
+            <label>Changes in FH: </label>
+            <div class="form-check-inline ">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="yn_5">Yes
+              </label>
+            </div>
+            <div class="form-check-inline ">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="yn_6">Yes
+              </label>
+            </div>
+          </div>
+          <div>
+            <label>Changes in SH: </label>
+            <div class="form-check-inline ">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="yn_7">Yes
+              </label>
+            </div>
+            <div class="form-check-inline ">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="yn_8">Yes
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="top-part">
+          <label>Explain any changes in PFSH: </label>
+          <div>
+            <textarea name="eaci_pfsh" class="form-control border border-primary" placeholder="Enter Here..."></textarea>
+          </div>
+        </div>
+        <div class="top-part">
+          <label>F. Examination </label>
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td><label>Vitals: </label></td>
+                <td colspan="2"><label>Height: <input type="text" name="height" placeholder="Enter Here..."> </label></td>
+                <td colspan="2"><label>Weight: <input type="text" name="weight" placeholder="Enter Here..."> </label></td>
+                <td colspan="2"><label>BP: <input type="text" name="bp" placeholder="Enter Here..."> </label></td>
+              </tr>
+              <tr>
+                <td colspan="7"><label>General Appearance: <input type="text" name="general_appearance"placeholder="Enter Here..."></label></td>
+              </tr>
+              <tr>
+                <td><label>Musculoskeletal</label></td>
+                <td></td>
+                <td><label>Normal</label></td>
+                <td><label>Abnormal</label></td>
+                <td><label></label></td>
+                <td><label>Normal </label></td>
+                <td><label>Abnormal </label></td>
+              </tr>
+              <tr>
+                <td rowspan="3"><label>Gait, station: </label>
+                  <label>Strength, tone: </label>
+                </td>
+                <td><label>Psychiatric</label></td>
+                <td><label> <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="yn_8.1">
+                  </label>
+                </div></label></td>
+                <td><label> <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="yn_8.2">
+                  </label>
+                </div></label></td>
+                <td><label></label></td>
+                <td><label> <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="yn_8.3">
+                  </label>
+                </div></label></td>
+                <td><label> <div class="form-check-inline">
+                  <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="yn_8.4">
+                  </label>
+                </div></label></td>
+              <tr>
+                <td><label>Orientation X 3</label></td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_9">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_10">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td><label>Mood/Affect</label></td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_11">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_12">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td><label>Attention Span and concentration</label></td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_13">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_14">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    Abnormal/Psychotic Thoughts
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_15">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_16">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+              </tr>
+              </tr>
+              <!-- 2nd row -->
+              <tr>
+                <td rowspan="5"><label>Neurological:</label>
+                </td>
+                <td><label>Language</label></td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_17">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_18">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td><label>Thought Process</label></td>
+                <td><label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_19">
+                      </label>
+                    </div>
+                  </label></td>
+                <td><label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_20">
+                      </label>
+                    </div>
+                  </label></td>
+              <tr>
+                <td><label>Fund of Knowledge</label></td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_21">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_22">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td><label>Associations</label></td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_23">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_24">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+              </tr>
+
+              <tr>
+                <td><label>Judgment</label></td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_25">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_26">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    Speech
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_27">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_28">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td><label>Recent Memory</label></td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_29">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_30">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                  
+
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_30.1">
+                      </label>
+                    </div>
+
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_30.2">
+                      </label>
+                    </div>
+
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td><label>Recent Memory</label></td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_31">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_32">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    
+
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_32.1">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+                <td>
+                  <label>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn_32.2">
+                      </label>
+                    </div>
+                  </label>
+                </td>
+              </tr>
+              </tr>
+              <!-- ./2nd row -->
+            </tbody>
+          </table>
+
+        </div>
+        <div class="top-part">
+          <label>G. Suicidal/Homicidal Risk: </label>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_33">Absent
+            </label>
+          </div>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_34">Present, Describe:
+            </label>
+          </div>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_35">Ideation
+            </label>
+          </div>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_36">Plan
+            </label>
+          </div>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_37">Intent
+            </label>
+          </div>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_38">Attempt
+            </label>
+          </div>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_39">Other
+            </label>
+          </div>
+          <div class="pt-3">
+            <p>If Present Explain: <input type="text" name="ip_explain" placeholder="Enter Here..."> </p>
+          </div>
+        </div>
+        <div class="top-part">
+          <label>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="yn_40">Other Pertinent Findings (e.g. blood sugar,
+                other
+                medical) and Lab Work Reviewed:
+              </label>
+            </div>
+          </label>
+          <div>
+            <textarea name="opfalr_reviewed" class="form-control border border-primary" placeholder="Enter Here..."></textarea>
+          </div>
+        </div>
+        <div class="top-part">
+          <label>H.
+          </label>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_41">Prescription(s) Written
+            </label>
+          </div>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_42">None Prescribed Today
+            </label>
+          </div>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_43">Prescribed, No Changes
+            </label>
+          </div>
+          <div class="form-check-inline ">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="yn_44">Prescribed, New/Change
+            </label>
+          </div>
+        </div>
+        <div class="top-part">
+          <h5 class="title">List of Medications:</h5>
+          <table cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td><label>Medication</label></td>
+                <td><label>Dosage</label></td>
+              </tr>
+              <tr>
+                <td><label><input type="text" name="medication_1" placeholder="Enter Here..."></label></td>
+                <td><label><input type="text" name="dosage_1" placeholder="Enter Here..."></label></td>
+              </tr>
+              <tr>
+                <td><label><input type="text" name="medication_2" placeholder="Enter Here..."></label></td>
+                <td><label><input type="text" name="dosage_2" placeholder="Enter Here..."></label></td>
+              </tr>
+              <tr>
+                <td><label><input type="text" name="medication_3" placeholder="Enter Here..."></label></td>
+                <td><label><input type="text" name="dosage_3" placeholder="Enter Here..."></label></td>
+              </tr>
+
+              <tr>
+                <td><label><input type="text" name="medication_4" placeholder="Enter Here..."></label></td>
+                <td><label><input type="text" name="dosage_4" placeholder="Enter Here..."></label></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td colspan="3"><label>Explained rationale, risks/benefits, side effects, & treatment alternatives to
+                    Client/guardian
+                    (if new and/or changed medication)?</label>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_45">Yes
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_46">No
+                    </label>
+                  </div>
+                </td>
+                <td colspan="3"><label>For Female Client of Childbearing Age:</label>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_47">Risk/Benefits of Meds and Pregnancy
+                      Discussed
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_48">Not applicable
+                    </label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_49">Client
+                    </label>
+                  </div>
+
+                </td>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_50">Understands Information
+                    </label>
+                  </div>
+
+                </td>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_51">Does Not Understand Information
+                    </label>
+                  </div>
+
+                </td>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_52">Agrees w/Medication
+                    </label>
+                  </div>
+
+                </td>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_53">Refuses medication
+                    </label>
+                  </div>
+
+                </td>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_54">Reports Compliance
+                    </label>
+                  </div>
+
+                </td>
+
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_55">Client
+                    </label>
+                  </div>
+
+                </td>
+                <td>
+
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_56">Understands Information
+                    </label>
+                  </div>
+                </td>
+                <td>
+
+                  <div class="form-check-inline ">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_57">Does not Understand Information
+                    </label>
+                  </div>
+                </td>
+                <td>
+
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_58">Agrees w/medication
+                    </label>
+                  </div>
+                </td>
+                <td>
+
+                  <div class="form-check-inline ">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_59">Refuses Medication
+                    </label>
+                  </div>
+                </td>
+                <td>
+
+                  <div class="form-check-inline ">
+                    <label class="form-check-label">
+                      <input type="radio" class="form-check-input" name="yn_60">Reports Compliance
+                    </label>
+                  </div>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <label>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                I.
+                <input type="checkbox" class="form-check-input" name="yn_61">Counseling and Coordination of Care
+                (Describe):
+              </label>
+            </div>
+          </label>
+          <div class="pb-4">
+            <textarea name="caco_care" class="form-control border border-primary" placeholder="Enter Here..."></textarea>
+          </div>
+          <div>
+            <label>Time Spent in Counseling and Coordination of Care: <input name="tsicaco_care" type="text"placeholder="Enter Here..."</label>
+          </div>
+          <div class="pb-4 pt-4">
+            <label>
+              J. Labs/other Work Up Ordered:
+            </label>
+            <textarea name="lwu_ordered" class="form-control border border-primary" placeholder="Enter Here..."></textarea>
+          </div>
+          <div class="pb-4">
+            <label>
+              K. DSM-5 Diagnosis:
+            </label>
+            <textarea name="dsm_diagnosis" class="form-control border border-primary" placeholder="Enter Here..."></textarea>
+          </div>
+          <div class="pb-4">
+            <label>
+              L. Plan/ Follow-up:
+            </label>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="yn_62">No
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" name="yn_63">Yes
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label>
+                in
+                <input name="in" type="text" placeholder="Enter Here...">Weeks/ <input name="weeks" type="text" placeholder="Enter Here...">Months
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="top-part d-flex justify-content-between">
+          <label>Psychiatrist Signature/Credentials: <a href="#" data-target="#signatureModal" data-toggle="modal">Add Signature<i class="fa fa-signature"></i></a> </label>
+          <label>Date: <input type="date" name="date_1"></label>
+        </div>
+
+
+
+        <div class="section_bottom">
+          <div class="button-row flex-div">
+            <div class="save-prog"><button type="submit"><span class="cloud-icon"><i class="fas fa-cloud"></i></span>
+                Save</button></div>
+            <div class="print"><button type="button"><span class="print-icon"><i class="fas fa-print"></i></span>Print</button>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="modal fade" id="signatureModal" data-backdrop="static">
+          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>Add signature</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#drawsig">Draw</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#uploadsig">Upload</a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="drawsig">
+                    <div class="row mb-2">
+                      <div class="col-md-12">
+                        <canvas id="sig-canvas" height="120" style="width: 100%;"></canvas>
+                      </div>
+                      <input type="hidden" class="form-control-file sing_draw" name="sing_draw">
+                    </div>
+                    <button type="button" class="btn btn-danger p-2" id="sig-clearBtn">Clear</button>
+                  </div>
+                  <div class="tab-pane fade" id="uploadsig">
+                    <label>Upload File</label>
+                    <input type="file" class="form-control-file" name="updload_sign">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Add
+                  Signature
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- signature modal caregiver -->
+        <div class="modal fade" id="signatureModal2" data-backdrop="static">
+          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>Add signature</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#drawsig2">Draw</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#uploadsig2">Upload</a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="drawsig2">
+                    <div class="row mb-2">
+                      <div class="col-md-12">
+                        <canvas id="sig-canvas2" height="120" style="width: 100%;"></canvas>
+                      </div>
+                      <input type="hidden" class="form-control-file sing_draw2" name="sing_draw2">
+                    </div>
+                    <button type="button" class="btn btn-danger p-2" id="sig-clearBtn2">Clear</button>
+                  </div>
+                  <div class="tab-pane fade" id="uploadsig2">
+                    <label>Upload File</label>
+                    <input type="file" class="form-control-file" name="updload_sign2">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Add
+                  Signature
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        @csrf
+      </form>
+      <div class="footer-section">
+        <div class="flex-div">
+          <div class="col-item">
+            <p>Amrex Therapy Corporation
+            </p>
+          </div>
+          <div class="col-item">
+            <p> <a href="tel:(469) 215-1101">Phone: (469) 215-1101,</a> &nbsp;<a href="mailto:info@amrextherapypm.com">
+                <span>Email:</span>
+                info@amrextherapypm.com,</a>&nbsp; <a href="fax:732-276-9878"> Fax:
+                732-276-9878,</a>&nbsp; <a href="https://amrextherapypm.com/index.html">amrextherapypm.com</a> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- signature modal -->
+  <div class="modal fade" id="signatureModal" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Add signature</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#drawsig">Draw</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#uploadsig">Upload</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="drawsig">
+              <div class="row mb-2">
+                <div class="col-md-12">
+                  <canvas id="sig-canvas" height="120" style="width: 100%;"></canvas>
+                </div>
+              </div>
+              <button type="button" class="btn btn-danger p-2" id="sig-clearBtn">Clear</button>
+            </div>
+            <div class="tab-pane fade" id="uploadsig">
+              <label>Upload File</label>
+              <input type="file" class="form-control-file">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save
+            Signature</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ signature modal -->
+  <!-- Jq Files -->
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <!-- Signature -->
+  <script>
+    (function () {
+      window.requestAnimFrame = (function (callback) {
+        return window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.oRequestAnimationFrame ||
+          window.msRequestAnimaitonFrame ||
+          function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+          };
+      })();
+      var canvas = document.getElementById("sig-canvas");
+      var ctx = canvas.getContext("2d");
+      ctx.strokeStyle = "#222222";
+      ctx.lineWidth = 4;
+      var drawing = false;
+      var mousePos = {
+        x: 0,
+        y: 0
+      };
+      var lastPos = mousePos;
+      canvas.addEventListener("mousedown", function (e) {
+        drawing = true;
+        lastPos = getMousePos(canvas, e);
+      }, false);
+      canvas.addEventListener("mouseup", function (e) {
+        drawing = false;
+      }, false);
+      canvas.addEventListener("mousemove", function (e) {
+        mousePos = getMousePos(canvas, e);
+      }, false);
+      // Add touch event support for mobile
+      canvas.addEventListener("touchstart", function (e) {}, false);
+      canvas.addEventListener("touchmove", function (e) {
+        var touch = e.touches[0];
+        var me = new MouseEvent("mousemove", {
+          clientX: touch.clientX,
+          clientY: touch.clientY
+        });
+        canvas.dispatchEvent(me);
+      }, false);
+      canvas.addEventListener("touchstart", function (e) {
+        mousePos = getTouchPos(canvas, e);
+        var touch = e.touches[0];
+        var me = new MouseEvent("mousedown", {
+          clientX: touch.clientX,
+          clientY: touch.clientY
+        });
+        canvas.dispatchEvent(me);
+      }, false);
+      canvas.addEventListener("touchend", function (e) {
+        var me = new MouseEvent("mouseup", {});
+        canvas.dispatchEvent(me);
+      }, false);
+
+      function getMousePos(canvasDom, mouseEvent) {
+        var rect = canvasDom.getBoundingClientRect();
+        return {
+          x: mouseEvent.clientX - rect.left,
+          y: mouseEvent.clientY - rect.top
+        }
+      }
+
+      function getTouchPos(canvasDom, touchEvent) {
+        var rect = canvasDom.getBoundingClientRect();
+        return {
+          x: touchEvent.touches[0].clientX - rect.left,
+          y: touchEvent.touches[0].clientY - rect.top
+        }
+      }
+
+      function renderCanvas() {
+        if (drawing) {
+          ctx.moveTo(lastPos.x, lastPos.y);
+          ctx.lineTo(mousePos.x, mousePos.y);
+          ctx.stroke();
+          lastPos = mousePos;
+        }
+      }
+      // Prevent scrolling when touching the canvas
+      document.body.addEventListener("touchstart", function (e) {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, false);
+      document.body.addEventListener("touchend", function (e) {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, false);
+      document.body.addEventListener("touchmove", function (e) {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, false);
+      (function drawLoop() {
+        requestAnimFrame(drawLoop);
+        renderCanvas();
+      })();
+
+      function clearCanvas() {
+        canvas.width = canvas.width;
+      }
+      // Set up the UI
+      var sigText = document.getElementById("sig-dataUrl");
+      var sigImage = document.getElementById("sig-image");
+      var clearBtn = document.getElementById("sig-clearBtn");
+      clearBtn.addEventListener("click", function (e) {
+        clearCanvas();
+        sigText.innerHTML = "Data URL for your signature will go here!";
+        sigImage.setAttribute("src", "");
+      }, false);
+    })();
+  </script>
+</body>
+
+</html>

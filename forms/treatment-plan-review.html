@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treatment Plan Review</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./form-style.css">
+</head>
+
+<body>
+    <div class="treatment-plan">
+        <div class="content">
+            <!-- headers -->
+            <div class="flex-div">
+                <div class="col-item">
+                    <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+                </div>
+                <div class="col-item">
+                    <div class="info-details">
+                        <ul>
+                            <li> <span>Mail:</span>4001 Stableglen DR Rockwall, TX 75032</li>
+                            <li><a href="mailto:info@amrextherapypm.com"> <span>Email:</span>info@amrextherapypm.com</a>
+                            </li>
+                            <li><span>Phone:</span> (469) 215-1101</li>
+                            <li><a href="fax:732-276-9878"><span>Fax:</span>732-276-9878</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- headers -->
+            <form action="#">
+                <div class="page-title mb_40">
+                    <h1>Treatment Plan Review</h1>
+                </div>
+                <div class="top-part">
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label>Client Name:</label>
+                                    <input type="text" name="name" placeholder="Enter Here...">
+                                </td>
+                                <td>
+                                    <label>Client MR#:</label>
+                                    <input type="text" name="Client_mr" placeholder="Enter Here...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Date:</label>
+                                    <input type="date" name="date" placeholder="Enter Here...">
+                                </td>
+                                <td>
+                                    <label>Social Security #:</label>
+                                    <input type="text" name="social_security" placeholder="Enter Here...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Medicaid # or Group Insurance #:</label>
+                                    <input type="text" name="medicaid" placeholder="Enter Here...">
+                                </td>
+                                <td>
+                                    <label>Gender:</label>
+                                    <input type="text" name="gender" placeholder="Enter Here...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Date of Birth:</label>
+                                    <input type="date" name="date_1" placeholder="Enter Here...">
+                                </td>
+                                <td>
+                                    <label>Street Address:</label>
+                                    <input type="text" name="street_address" placeholder="Enter Here...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>City:</label>
+                                    <input type="text" name="city" placeholder="Enter Here...">
+                                </td>
+                                <td>
+                                    <label>State:</label>
+                                    <input type="text" name="state" placeholder="Enter Here...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Contact Phone #:</label>
+                                    <input type="text" name="contact_phone" placeholder="Enter Here...">
+                                </td>
+                                <td>
+                                    <label>Parent/Guardian:</label>
+                                    <input type="text" name="parent" placeholder="Enter Here...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Primary Clinician:</label>
+                                    <input type="text"name="primary_clinician" placeholder="Enter Here...">
+                                </td>
+                                <td>
+                                    <label>Date of Master Treatment Plan or last review:</label>
+                                    <input type="date" name="date_2" placeholder="Enter Here...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label>Dates of Review Period(Last 3 months):</label>
+                                    <input type="date" name="date_3" placeholder="Enter Here...">
+                                    <label>to:</label>
+                                    <input type="date" name="date_4" placeholder="Enter Here...">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-part">
+                    <h5 class="title">Treatment Plan Review Process:</h5>
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td colspan="2">
+                                    <label>This plan is based on a review of goals, objectives, and interventions
+                                        with the Client and/or the Clients parent/caregiver in the following
+                                        locations:</label>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="r" class="form-check-input">Client Home
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="r_1" class="form-check-input">Client School
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="r_2" class="form-check-input">Office
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Primary Clinician:</label>
+                                    <input type="text"name="primary_clinician_1" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>Date:</label>
+                                    <input type="date" name="date_5" placeholder="Enter here..">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label>Next Review Period (Next 3 Months):</label>
+                                    <input type="date" name="date_6" placeholder="Enter Here...">
+                                    <label>to:</label>
+                                    <input type="date" name="date_7" placeholder="Enter Here...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label>Based on Face-to-Face contact with:</label>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="r_3" class="form-check-input">Client
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="r_4" class="form-check-input">Parent/Guardian
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="r_5" class="form-check-input">Other
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-part">
+                    <h5 class="title">Diagnostic Impressions:</h5>
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td><label>F-Codes:</label></td>
+                                <td><label>Diagnosis:</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text"name="f_codes" placeholder="Enter here.."></td>
+                                <td><input type="text" name="diagnosis" placeholder="Enter here.."></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text"name="f_codes_1" placeholder="Enter here.."></td>
+                                <td><input type="text"name="diagnosis_1" placeholder="Enter here.."></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text"name="f_codes_2" placeholder="Enter here.."></td>
+                                <td><input type="text"name="diagnosis_2" placeholder="Enter here.."></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text"name="f_codes_3" placeholder="Enter here.."></td>
+                                <td><input type="text"name="diagnosis_3" placeholder="Enter here.."></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-part">
+                    <h5 class="title">Certification Statement:</h5>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" name="r_6" class="form-check-input">This Client is at risk for a more
+                            intensive, restrictive and costly mental health placement.
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label class="form-check-label">
+                            <input type="radio" name="r_7" class="form-check-input">This Client’s condition/functional
+                            level cannot be improved with less costly services
+                        </label>
+                    </div>
+                </div>
+                <div class="top-part">
+                    <h5 class="title">CHANGES IN THE MASTER TREATMENT PLAN</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="r_8" class="form-check-input">Change(s) in service or frequency of
+                                    services
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="r_9" class="form-check-input">Change(s) to treatment interventions
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="r_10" class="form-check-input">Change(s) in problem(s) areas
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="r_11" class="form-check-input">Changes(s) to treatment objectives
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="r_12" class="form-check-input">Change(s) in provider
+                                    name/credentials
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="r_13" class="form-check-input">Change(s) to treatment goals
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="r_14" class="form-check-input">Existing problem area closed/goal
+                                    met
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="checkbox" name="r_15" class="form-check-input">Existing problem area closed/goal
+                                    not met
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top-part">
+                    <h5 class="title">Explanation of Changes:</h5>
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="flex-div first"><span></span> <span>
+                                            <textarea name="eo_changes"class="form-control" placeholder="Enter Here..."></textarea></span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-part">
+                    <h5 class="title">Current Medications:</h5>
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="flex-div first"><span></span> <span>
+                                            <textarea name="current_medications" class="form-control" placeholder="Enter Here..."></textarea></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="r-16" class="form-check-input">Client is not on any
+                                            Medications
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><label>Strengths</label></td>
+                                <td><label>Weakness</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="strengths" placeholder="Enter here.."></td>
+                                <td><input type="text" name="weakness" placeholder="Enter here.."></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="strengths_1" placeholder="Enter here.."></td>
+                                <td><input type="text"name="weakness_1" placeholder="Enter here.."></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-part">
+                    <table cellpadding="0" cellspacing="0" class="extra">
+                        <tbody>
+                            <tr>
+                                <td><label>Type of Service</label></td>
+                                <td><label>Billing Code</label></td>
+                                <td colspan="2"><label>Amount</label></td>
+                                <td><label>Frequency</label></td>
+                                <td><label>Duration</label></td>
+                                <td><label>Provider Title</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>TBOS (Therapeutic Behavioral On-Site)</label></td>
+                                <td><label>(H2019 HO)</label></td>
+                                <td><label><input type="text" name="amount" placeholder="Enter here.."></label></td>
+                                <td><label>Units</label></td>
+                                <td><label>Weekly</label></td>
+                                <td><label>6 Months</label></td>
+                                <td><label>Therapist</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>Individual Outpatient</label></td>
+                                <td><label>(H2019 HR)</label></td>
+                                <td><label><input type="text" name="amount_1" placeholder="Enter here.."></label></td>
+                                <td><label>Units</label></td>
+                                <td><label>Weekly</label></td>
+                                <td><label>6 Months</label></td>
+                                <td><label>Therapist</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>Master Treatment Plan</label></td>
+                                <td><label>(H0032)</label></td>
+                                <td><label><input type="text" name="amount_2" placeholder="Enter here.."></label></td>
+                                <td><label>Units</label></td>
+                                <td><label>1 time</label></td>
+                                <td><label>Per Year</label></td>
+                                <td><label>Therapist</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>Treatment Plan Review</label></td>
+                                <td><label>(H0032 TS)</label></td>
+                                <td><label><input type="text" name="amount_3" placeholder="Enter here.."></label></td>
+                                <td><label>Units</label></td>
+                                <td><label>2 times</label></td>
+                                <td><label>Per Year</label></td>
+                                <td><label>Therapist</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>Brief Behavioral Health Status Exam</label></td>
+                                <td><label>(H2010 HO)</label></td>
+                                <td><label><input type="text" name="amount_4" placeholder="Enter here.."></label></td>
+                                <td><label>Units</label></td>
+                                <td><label>1 time</label></td>
+                                <td><label>Per Year</label></td>
+                                <td><label>Assessor</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>Psychiatric Evaluation</label></td>
+                                <td><label>(H2000 HP)</label></td>
+                                <td><label><input type="text" name="amount_5" placeholder="Enter here.."></label></td>
+                                <td><label>Units</label></td>
+                                <td><label>Yearly</label></td>
+                                <td><label>Per Year</label></td>
+                                <td><label>Psychiatrist</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>Medication Management</label></td>
+                                <td><label>(T1015)</label></td>
+                                <td><label><input type="text" name="amount_6" placeholder="Enter here.."></label></td>
+                                <td><label>Units</label></td>
+                                <td><label>Monthly</label></td>
+                                <td><label>6 months</label></td>
+                                <td><label>Psychiatrist</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>Group Therapy</label></td>
+                                <td><label>(H2019 HQ)</label></td>
+                                <td><label><input type="text" name="amount_7" placeholder="Enter here.."></label></td>
+                                <td><label>Units</label></td>
+                                <td><label>Weekly</label></td>
+                                <td><label>6 months</label></td>
+                                <td><label>Therapist</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>Limited Functional Asmt (CFARS)</label></td>
+                                <td><label>(H0031)</label></td>
+                                <td><label><input type="text" name="amount_8" placeholder="Enter here.."></label></td>
+                                <td><label>Units</label></td>
+                                <td><label>3 times</label></td>
+                                <td><label>Per Year</label></td>
+                                <td><label>Therapist</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>Bio-Psychosocial Evaluation</label></td>
+                                <td><label>(H0031 HN)</label></td>
+                                <td><label><input type="text" name="amount_9" placeholder="Enter here.."></label></td>
+                                <td><label>Units</label></td>
+                                <td><label>1 time</label></td>
+                                <td><label>Per Year</label></td>
+                                <td><label>Assessor</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>In-Depth Assessment</label></td>
+                                <td><label>(H0031 HO)
+                                        (H0031 TS)
+                                    </label></td>
+                                <td><label><input type="text" name="amount_10" placeholder="Enter here.."></label></td>
+                                <td><label>Units</label></td>
+                                <td><label>1 time</label></td>
+                                <td><label>Per Year</label></td>
+                                <td><label>Therapist</label></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-part">
+                    <h5 class="title">Discharge Criteria</h5>
+                    <p>At this point in the Client’s care, the following are considerations for the discharge at case
+                        closing:</p>
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td><label>Problem Areas</label></td>
+                                <td><label>Discharge Goals</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>Problem #1: </label><input type="text" name="problem_1"  placeholder="Enter here.."></td>
+                                <td><input type="text" name="discharge_goals_1" placeholder="Enter here.."></td>
+                            </tr>
+                            <tr>
+                                <td><label>Problem #3: </label><input type="text" name="problem_2" placeholder="Enter here.."></td>
+                                <td><input type="text" name="discharge_goals_2" placeholder="Enter here.."></td>
+                            </tr>
+                            <tr>
+                                <td><label>Problem #3: </label><input type="text" name="problem_3" placeholder="Enter here.."></td>
+                                <td><input type="text" name="discharge_goals_3" placeholder="Enter here.."></td>
+                            </tr>
+                            <tr>
+                                <td><label>Problem #4: </label><input type="text" name="problem_4" placeholder="Enter here.."></td>
+                                <td><input type="text" name="discharge_goals_4" placeholder="Enter here.."></td>
+                            </tr>
+                            <tr>
+                                <td><label>Anticipated Length of Services:</label></td>
+                                <td><input type="text" name="alo_services" placeholder="Enter here.."></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" class="extra mt-3">
+                        <tbody>
+                            <tr>
+                                <td><label>Treatment Problem Areas</label></td>
+                                <td><label>Target Date for Completion</label></td>
+                                <td><label>Baseline Rate/Duration</label></td>
+                                <td><label>Current
+                                        Rate/Duration
+                                    </label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="tp_areas" placeholder="Enter here.."></td>
+                                <td><input type="text" name="tdf_completion" placeholder="Enter here.."></td>
+                                <td><input type="text" name="baseline_rate" placeholder="Enter here.."></td>
+                                <td><input type="text" name="current_rate" placeholder="Enter here.."></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="tp_areas_1" placeholder="Enter here.."></td>
+                                <td><input type="text" name="tdf_completion_1" placeholder="Enter here.."></td>
+                                <td><input type="text" name="baseline_rate_1"  placeholder="Enter here.."></td>
+                                <td><input type="text" name="current_rate_1" placeholder="Enter here.."></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="tp_areas_2" placeholder="Enter here.."></td>
+                                <td><input type="text" name="tdf_completion_2" placeholder="Enter here.."></td>
+                                <td><input type="text" name="baseline_rate_2" placeholder="Enter here.."></td>
+                                <td><input type="text" name="current_rate_2" placeholder="Enter here.."></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-part">
+                    <h5 class="title">Treatment Problem Sheet</h5>
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label>Problem #1:</label>
+                                    <input type="text" name="tps_1" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>Evidenced by:</label>
+                                    <input type="text" name="evidenced" placeholder="Enter here..">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Current Rate/Duration:</label>
+                                    <input type="text" name="duration" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>Target Goal:</label>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="gm" class="form-check-input">Goal Met
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="gm_1" class="form-check-input">Goal Not Met
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" class="extra mt-3">
+                        <tbody>
+                            <tr>
+                                <td><label>Obj. #</label></td>
+                                <td><label>Objectives</label></td>
+                                <td><label>Target Date</label></td>
+                                <td><label>Goal met/Not Met</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>1</label></td>
+                                <td><input type="text" name="obj" placeholder="Enter here.."></td>
+                                <td><input type="text" name="target_date" placeholder="Enter here.."></td>
+                                <td>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="ob1" class="form-check-input">Objective Met
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="ob2" class="form-check-input">Objective Not Met
+                                        </label>
+                                    </div>
+                                    <div class="mt-2">
+                                        <label>Describe the progress towards objective/goal:</label>
+                                        <input type="text" name="dtpt_goal" placeholder="Enter here..">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <label>Interventions</label>
+                                    <input type="text" name="interventions" placeholder="Enter here..">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table cellpadding="0" cellspacing="0" class="extra mt-3">
+                        <tbody>
+                            <tr>
+                                <td><label>Obj. #</label></td>
+                                <td><label>New Objectives</label></td>
+                                <td><label>Start Date</label></td>
+                                <td><label>Target Date</label></td>
+                            </tr>
+                            <tr>
+                                <td><label>1</label></td>
+                                <td><input type="text" name="new_obj" placeholder="Enter here.."></td>
+                                <td><input type="text" name="start_date" placeholder="Enter here.."></td>
+                                <td><input type="text" name="target_dat" placeholder="Enter here.."></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <label>Interventions</label>
+                                    <input type="text" name="interventions_1" placeholder="Enter here..">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-part">
+                    <h5 class="title text-center">Treatment Plan Review</h5>
+                    <h5 class="title">STATEMENT OF ELIGIBILITY/MEDICAL NECESSITY:</h5>
+                    <p>I, treating Physician or Licensed Practitioner of Healing Arts certifies that the above-named
+                        services are medically necessary and appropriate to client’s diagnosis and treatment needs.</p>
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label>CLIENT NAME:</label>
+                                    <input type="text" name="client_name" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>DATE:</label>
+                                    <input type="date" name="date_10">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>MR#:</label>
+                                    <input type="text" name="client_mr_2" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>LICENSED PRACTITIONER OF THE HEALING ARTS:</label>
+                                    <input type="text" name="lpoth_arts" placeholder="Enter here..">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>CREDENTIALS</label>
+                                    <input type="text" name="credentials" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>EFFECTIVE DATE:</label>
+                                    <input type="date" name="effective_date" placeholder="Enter here..">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>PARENT OR LEGAL GUARDIAN:</label>
+                                    <input type="text" name="pol_guardian" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>DATE:</label>
+                                    <input type="date" name="date_11" placeholder="Enter here..">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>PRIMARY CLINICIAN SIGNATURE & CREDENTIALS:</label>
+                                    <input type="text" name="pcs_credentials" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>DATE:</label>
+                                    <input type="date" name="date_12" placeholder="Enter here..">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>PSYCHIATRIST (IF INDICATED) </label>
+                                    <input type="text" name="psychiatrist" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>DATE:</label>
+                                    <input type="date" name="date_13" placeholder="Enter here..">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-part">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" data-target="#signatureModal" data-toggle="modal">Client Signature<i class="fa fa-signature"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" data-target="#signatureModal" data-toggle="modal">Clinician Signature<i class="fa fa-signature"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section_bottom">
+                    <div class="button-row flex-div">
+                        <div class="save-prog"><button type="submit"><span class="cloud-icon"><i class="fas fa-cloud"></i></span>
+                                Save</button></div>
+                        <div class="print"><button type="button"><span class="print-icon"><i class="fas fa-print"></i></span>Print</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="modal fade" id="signatureModal" data-backdrop="static">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>Add signature</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#drawsig">Draw</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#uploadsig">Upload</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="drawsig">
+                                        <div class="row mb-2">
+                                            <div class="col-md-12">
+                                                <canvas id="sig-canvas" height="120" style="width: 100%;"></canvas>
+                                            </div>
+                                            <input type="hidden" class="form-control-file sing_draw" name="sing_draw">
+                                        </div>
+                                        <button type="button" class="btn btn-danger p-2" id="sig-clearBtn">Clear</button>
+                                    </div>
+                                    <div class="tab-pane fade" id="uploadsig">
+                                        <label>Upload File</label>
+                                        <input type="file" class="form-control-file" name="updload_sign">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Add
+                                    Signature
+                                </button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- signature modal caregiver -->
+                <div class="modal fade" id="signatureModal2" data-backdrop="static">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>Add signature</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#drawsig2">Draw</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#uploadsig2">Upload</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="drawsig2">
+                                        <div class="row mb-2">
+                                            <div class="col-md-12">
+                                                <canvas id="sig-canvas2" height="120" style="width: 100%;"></canvas>
+                                            </div>
+                                            <input type="hidden" class="form-control-file sing_draw2" name="sing_draw2">
+                                        </div>
+                                        <button type="button" class="btn btn-danger p-2" id="sig-clearBtn2">Clear</button>
+                                    </div>
+                                    <div class="tab-pane fade" id="uploadsig2">
+                                        <label>Upload File</label>
+                                        <input type="file" class="form-control-file" name="updload_sign2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Add
+                                    Signature
+                                </button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="footer-section">
+                <div class="flex-div">
+                    <div class="col-item">
+                        <p>Amrex Therapy Corporation
+                        </p>
+                    </div>
+                    <div class="col-item">
+                        <p> <a href="tel:(469) 215-1101">Phone: (469) 215-1101,</a> &nbsp;<a
+                                href="mailto:info@amrextherapypm.com"> <span>Email:</span>
+                                info@amrextherapypm.com,</a>&nbsp; <a href="fax:732-276-9878"> Fax:
+                                732-276-9878,</a>&nbsp; <a
+                                href="https://amrextherapypm.com/index.html">amrextherapypm.com</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signature modal -->
+    <div class="modal fade" id="signatureModal" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Add signature</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#drawsig">Draw</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#uploadsig">Upload</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="drawsig">
+                            <div class="row mb-2">
+                                <div class="col-md-12">
+                                    <canvas id="sig-canvas" height="120" style="width: 100%;"></canvas>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-danger p-2" id="sig-clearBtn">Clear</button>
+                        </div>
+                        <div class="tab-pane fade" id="uploadsig">
+                            <label>Upload File</label>
+                            <input type="file" class="form-control-file">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save
+                        Signature</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ signature modal -->
+    <!-- Jq Files -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Signature -->
+    <script>
+        (function () {
+            window.requestAnimFrame = (function (callback) {
+                return window.requestAnimationFrame ||
+                    window.webkitRequestAnimationFrame ||
+                    window.mozRequestAnimationFrame ||
+                    window.oRequestAnimationFrame ||
+                    window.msRequestAnimaitonFrame ||
+                    function (callback) {
+                        window.setTimeout(callback, 1000 / 60);
+                    };
+            })();
+            var canvas = document.getElementById("sig-canvas");
+            var ctx = canvas.getContext("2d");
+            ctx.strokeStyle = "#222222";
+            ctx.lineWidth = 4;
+            var drawing = false;
+            var mousePos = {
+                x: 0,
+                y: 0
+            };
+            var lastPos = mousePos;
+            canvas.addEventListener("mousedown", function (e) {
+                drawing = true;
+                lastPos = getMousePos(canvas, e);
+            }, false);
+            canvas.addEventListener("mouseup", function (e) {
+                drawing = false;
+            }, false);
+            canvas.addEventListener("mousemove", function (e) {
+                mousePos = getMousePos(canvas, e);
+            }, false);
+            // Add touch event support for mobile
+            canvas.addEventListener("touchstart", function (e) {}, false);
+            canvas.addEventListener("touchmove", function (e) {
+                var touch = e.touches[0];
+                var me = new MouseEvent("mousemove", {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(me);
+            }, false);
+            canvas.addEventListener("touchstart", function (e) {
+                mousePos = getTouchPos(canvas, e);
+                var touch = e.touches[0];
+                var me = new MouseEvent("mousedown", {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(me);
+            }, false);
+            canvas.addEventListener("touchend", function (e) {
+                var me = new MouseEvent("mouseup", {});
+                canvas.dispatchEvent(me);
+            }, false);
+
+            function getMousePos(canvasDom, mouseEvent) {
+                var rect = canvasDom.getBoundingClientRect();
+                return {
+                    x: mouseEvent.clientX - rect.left,
+                    y: mouseEvent.clientY - rect.top
+                }
+            }
+
+            function getTouchPos(canvasDom, touchEvent) {
+                var rect = canvasDom.getBoundingClientRect();
+                return {
+                    x: touchEvent.touches[0].clientX - rect.left,
+                    y: touchEvent.touches[0].clientY - rect.top
+                }
+            }
+
+            function renderCanvas() {
+                if (drawing) {
+                    ctx.moveTo(lastPos.x, lastPos.y);
+                    ctx.lineTo(mousePos.x, mousePos.y);
+                    ctx.stroke();
+                    lastPos = mousePos;
+                }
+            }
+            // Prevent scrolling when touching the canvas
+            document.body.addEventListener("touchstart", function (e) {
+                if (e.target == canvas) {
+                    e.preventDefault();
+                }
+            }, false);
+            document.body.addEventListener("touchend", function (e) {
+                if (e.target == canvas) {
+                    e.preventDefault();
+                }
+            }, false);
+            document.body.addEventListener("touchmove", function (e) {
+                if (e.target == canvas) {
+                    e.preventDefault();
+                }
+            }, false);
+            (function drawLoop() {
+                requestAnimFrame(drawLoop);
+                renderCanvas();
+            })();
+
+            function clearCanvas() {
+                canvas.width = canvas.width;
+            }
+            // Set up the UI
+            var sigText = document.getElementById("sig-dataUrl");
+            var sigImage = document.getElementById("sig-image");
+            var clearBtn = document.getElementById("sig-clearBtn");
+            clearBtn.addEventListener("click", function (e) {
+                clearCanvas();
+                sigText.innerHTML = "Data URL for your signature will go here!";
+                sigImage.setAttribute("src", "");
+            }, false);
+        })();
+    </script>
+</body>
+
+</html>

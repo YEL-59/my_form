@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Release of Information from CBH to Other Organization</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="./form-style.css">
+</head>
+
+<body>
+    <div class="treatment-plan">
+        <div class="content">
+            <!-- headers -->
+            <div class="flex-div">
+                <div class="col-item">
+                    <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+                </div>
+                <div class="col-item">
+                    <div class="info-details">
+                        <ul>
+                            <li> <span>Mail:</span>4001 Stableglen DR Rockwall, TX 75032</li>
+                            <li><a href="mailto:info@amrextherapypm.com"> <span>Email:</span>info@amrextherapypm.com</a>
+                            </li>
+                            <li><span>Phone:</span> (469) 215-1101</li>
+                            <li><a href="fax:732-276-9878"><span>Fax:</span>732-276-9878</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- headers -->
+            <form action="" method="POST" id="form_40">
+                @csrf
+                <input type="hidden" name="sessionid" value="{{ $session_id }}">
+
+                <div class="page-title mb_40">
+                    <h1>Release of Information from CBH to Other Organization</h1>
+                </div>
+                <div class="top-part">
+                    <p>I, <input type="text" name="pno_client" placeholder="Enter Here..." class="border-primary border-bottom">(print name of Client or
+                        parent/guardian, if minor child), hereby authorize: CBH, Inc. - <input type="text" name="pnofcbh_staff" placeholder="Enter Here..." class="border-primary border-bottom"> (print name of CBH staff)</p>
+                    <p>To release information consisting of (indicate the specific information that may be released,
+                        i.e. Psychiatric, Medical Records or Information; Social History, Psychological Records or
+                        Information, Educational or School Records, etc) <span class="font-weight-bold">LIST
+                            SPECIFICALLY WHAT YOU WANT RELEASED:</span></p>
+                </div>
+                <div class="top-part">
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label>Assessment (Type and Date):</label>
+                                    <input type="text" class="w-50"  name="assessment" placeholder="Enter Here...">
+                                </td>
+                                <td>
+                                    <label>Treatment Plan/Review (Type and Date):</label>
+                                    <input type="text" name="treatment_plan" placeholder="Enter Here...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Summary (Type and Date):</label>
+                                    <input type="text" name="summary" placeholder="Enter Here...">
+                                </td>
+                                <td>
+                                    <label>Behavioral Analysis (Type and Date):</label>
+                                    <input type="text" name="behavioral_analysis" placeholder="Enter Here...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Other Testing (Type and Date):</label>
+                                    <input type="text" name="other_testing" placeholder="Enter Here...">
+                                </td>
+                                <td>
+                                    <label>Other (Explain):</label>
+                                    <input type="text" name="other" placeholder="Enter Here...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label>Regarding:</label>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="r" class="form-check-input">Myself
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="r_1" class="form-check-input">Minor Child
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="radio" name="r_2" class="form-check-input">Other(Explain)
+                                        </label>
+                                    </div>
+                                    <input type="text" name="regrading" placeholder="Enter Here..." class="border-bottom border-primary">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Check one:</label>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="child_name" class="form-check-input">Child Name
+                                        </label>
+                                    </div>
+                                    <input type="text" name="check_one" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="dob" class="form-check-input">Date of Birth
+                                        </label>
+                                    </div>
+                                    <input type="date" name="date" class="border-primary border-bottom">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-part">
+                    <h5 class="title">For the purpose of assisting with diagnosis, treatment, or rehabilitation to:
+                    </h5>
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td colspan="2">
+                                    <label>Enter Name and Address of Organization to whom the information is being
+                                        released:</label>
+                                    <input type="text" name="enaaootwtiib_released" placeholder="Enter here..">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-part">
+                    <p>I understand that only the above specified information can be disclosed by the above specified
+                        organization.</p>
+                    <p>This information has been disclosed to you from the records protected by Federal confidentiality
+                        rules (42 CFR part 2). The federal rules prohibit you from making any further disclosure of this
+                        information unless further disclosure is expressly permitted by the 42 CFR part 2. A general
+                        authorization for the release of medical or other information is not sufficient for this
+                        purpose.</p>
+                    <p>This consent or authorization for release of information shall be effective the date of signature
+                        and shall expire one year from the date of signature, which is (enter date) <input type="date" name="date_1" class="border-bottom border-primary">, or at the time services are concluded
+                        if before one
+                        year, or at anytime if revoked by the Client and/or parent/guardian. I also understand that I
+                        may revoke this consent or authorization at anytime, providing I notify the program in writing
+                        to this effect. Revocation has no effect on action previously taken.</p>
+                </div>
+                <div class="top-part">
+                    <h5 class="title">For the purpose of assisting with diagnosis, treatment, or rehabilitation to:
+                    </h5>
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label>Client’s Name:</label>
+                                    <input type="text" name="clients" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>Date:</label>
+                                    <input type="date" name="date_2" placeholder="Enter here.." class="border-primary border-bottom">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Parent/Guardian’s Name:</label>
+                                    <input type="text" name="parent_name" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>Date:</label>
+                                    <input type="date" name="date_3" class="border-primary border-bottom">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>Witness Name:</label>
+                                    <input type="text" name="witness_name" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>Date:</label>
+                                    <input type="date" name="date_4" class="border-primary border-bottom">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="top-part">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#" data-target="#signatureModal" data-toggle="modal">Client’s Signature<i class="fa fa-signature"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" data-target="#signatureModal" data-toggle="modal">Guardian’s
+                                Signature<i class="fa fa-signature"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#" data-target="#signatureModal" data-toggle="modal">Witness Signature<i class="fa fa-signature"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-part">
+                    <p>If the Client has difficulty understanding or reading this document, please print the name of the
+                        person who read this document or explained it to the Client in the field above. (include
+                        signature and date). </p>
+                    <table cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label>CBH Staff Name:</label>
+                                    <input type="text" name="cs_name" placeholder="Enter here..">
+                                </td>
+                                <td>
+                                    <label>Date:</label>
+                                    <input type="date" name="date_5" placeholder="Enter here.." class="border-primary border-bottom">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" data-target="#signatureModal" data-toggle="modal">CBH Staff Signature<i class="fa fa-signature"></i></a>
+                </div>
+                <div class="section_bottom">
+                    <div class="button-row flex-div">
+                        <div class="save-prog"><button type="submit"><span class="cloud-icon"><i class="fas fa-cloud"></i></span>
+                                Save</button></div>
+                        <div class="print"><button type="button"><span class="print-icon"><i class="fas fa-print"></i></span>Print</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="signatureModal" data-backdrop="static">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>Add signature</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#drawsig">Draw</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#uploadsig">Upload</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="drawsig">
+                                        <div class="row mb-2">
+                                            <div class="col-md-12">
+                                                <canvas id="sig-canvas" height="120" style="width: 100%;"></canvas>
+                                            </div>
+                                            <input type="hidden" class="form-control-file sing_draw" name="sing_draw">
+                                        </div>
+                                        <button type="button" class="btn btn-danger p-2" id="sig-clearBtn">Clear</button>
+                                    </div>
+                                    <div class="tab-pane fade" id="uploadsig">
+                                        <label>Upload File</label>
+                                        <input type="file" class="form-control-file" name="updload_sign">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Add
+                                    Signature
+                                </button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- signature modal caregiver -->
+                <div class="modal fade" id="signatureModal2" data-backdrop="static">
+                    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4>Add signature</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-toggle="tab" href="#drawsig2">Draw</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-toggle="tab" href="#uploadsig2">Upload</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="drawsig2">
+                                        <div class="row mb-2">
+                                            <div class="col-md-12">
+                                                <canvas id="sig-canvas2" height="120" style="width: 100%;"></canvas>
+                                            </div>
+                                            <input type="hidden" class="form-control-file sing_draw2" name="sing_draw2">
+                                        </div>
+                                        <button type="button" class="btn btn-danger p-2" id="sig-clearBtn2">Clear</button>
+                                    </div>
+                                    <div class="tab-pane fade" id="uploadsig2">
+                                        <label>Upload File</label>
+                                        <input type="file" class="form-control-file" name="updload_sign2">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Add
+                                    Signature
+                                </button>
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @csrf
+            </form>
+            <div class="footer-section">
+                <div class="flex-div">
+                    <div class="col-item">
+                        <p>Amrex Therapy Corporation
+                        </p>
+                    </div>
+                    <div class="col-item">
+                        <p> <a href="tel:(469) 215-1101">Phone: (469) 215-1101,</a> &nbsp;<a
+                                href="mailto:info@amrextherapypm.com"> <span>Email:</span>
+                                info@amrextherapypm.com,</a>&nbsp; <a href="fax:732-276-9878"> Fax:
+                                732-276-9878,</a>&nbsp; <a
+                                href="https://amrextherapypm.com/index.html">amrextherapypm.com</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- signature modal -->
+    <div class="modal fade" id="signatureModal" data-backdrop="static">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Add signature</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#drawsig">Draw</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#uploadsig">Upload</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="drawsig">
+                            <div class="row mb-2">
+                                <div class="col-md-12">
+                                    <canvas id="sig-canvas" height="120" style="width: 100%;"></canvas>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-danger p-2" id="sig-clearBtn">Clear</button>
+                        </div>
+                        <div class="tab-pane fade" id="uploadsig">
+                            <label>Upload File</label>
+                            <input type="file" class="form-control-file">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save
+                        Signature</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ signature modal -->
+    <!-- Jq Files -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Signature -->
+    <script>
+        (function () {
+            window.requestAnimFrame = (function (callback) {
+                return window.requestAnimationFrame ||
+                    window.webkitRequestAnimationFrame ||
+                    window.mozRequestAnimationFrame ||
+                    window.oRequestAnimationFrame ||
+                    window.msRequestAnimaitonFrame ||
+                    function (callback) {
+                        window.setTimeout(callback, 1000 / 60);
+                    };
+            })();
+            var canvas = document.getElementById("sig-canvas");
+            var ctx = canvas.getContext("2d");
+            ctx.strokeStyle = "#222222";
+            ctx.lineWidth = 4;
+            var drawing = false;
+            var mousePos = {
+                x: 0,
+                y: 0
+            };
+            var lastPos = mousePos;
+            canvas.addEventListener("mousedown", function (e) {
+                drawing = true;
+                lastPos = getMousePos(canvas, e);
+            }, false);
+            canvas.addEventListener("mouseup", function (e) {
+                drawing = false;
+            }, false);
+            canvas.addEventListener("mousemove", function (e) {
+                mousePos = getMousePos(canvas, e);
+            }, false);
+            // Add touch event support for mobile
+            canvas.addEventListener("touchstart", function (e) {}, false);
+            canvas.addEventListener("touchmove", function (e) {
+                var touch = e.touches[0];
+                var me = new MouseEvent("mousemove", {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(me);
+            }, false);
+            canvas.addEventListener("touchstart", function (e) {
+                mousePos = getTouchPos(canvas, e);
+                var touch = e.touches[0];
+                var me = new MouseEvent("mousedown", {
+                    clientX: touch.clientX,
+                    clientY: touch.clientY
+                });
+                canvas.dispatchEvent(me);
+            }, false);
+            canvas.addEventListener("touchend", function (e) {
+                var me = new MouseEvent("mouseup", {});
+                canvas.dispatchEvent(me);
+            }, false);
+
+            function getMousePos(canvasDom, mouseEvent) {
+                var rect = canvasDom.getBoundingClientRect();
+                return {
+                    x: mouseEvent.clientX - rect.left,
+                    y: mouseEvent.clientY - rect.top
+                }
+            }
+
+            function getTouchPos(canvasDom, touchEvent) {
+                var rect = canvasDom.getBoundingClientRect();
+                return {
+                    x: touchEvent.touches[0].clientX - rect.left,
+                    y: touchEvent.touches[0].clientY - rect.top
+                }
+            }
+
+            function renderCanvas() {
+                if (drawing) {
+                    ctx.moveTo(lastPos.x, lastPos.y);
+                    ctx.lineTo(mousePos.x, mousePos.y);
+                    ctx.stroke();
+                    lastPos = mousePos;
+                }
+            }
+            // Prevent scrolling when touching the canvas
+            document.body.addEventListener("touchstart", function (e) {
+                if (e.target == canvas) {
+                    e.preventDefault();
+                }
+            }, false);
+            document.body.addEventListener("touchend", function (e) {
+                if (e.target == canvas) {
+                    e.preventDefault();
+                }
+            }, false);
+            document.body.addEventListener("touchmove", function (e) {
+                if (e.target == canvas) {
+                    e.preventDefault();
+                }
+            }, false);
+            (function drawLoop() {
+                requestAnimFrame(drawLoop);
+                renderCanvas();
+            })();
+
+            function clearCanvas() {
+                canvas.width = canvas.width;
+            }
+            // Set up the UI
+            var sigText = document.getElementById("sig-dataUrl");
+            var sigImage = document.getElementById("sig-image");
+            var clearBtn = document.getElementById("sig-clearBtn");
+            clearBtn.addEventListener("click", function (e) {
+                clearCanvas();
+                sigText.innerHTML = "Data URL for your signature will go here!";
+                sigImage.setAttribute("src", "");
+            }, false);
+        })();
+    </script>
+</body>
+
+</html>

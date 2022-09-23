@@ -1,0 +1,728 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #207ac7;
+    margin-bottom: 16px;
+}
+
+::placeholder {
+    font-size: 14px !important;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.mb_30 {
+    margin-bottom: 20px;
+}
+
+.treatment-plan {
+    width: 100%;
+    max-width: 1280px;
+    display: block;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background: #207ac7;
+}
+
+.treatment-plan .flex-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.treatment-plan .flex-div.first {
+    align-items: normal;
+}
+
+.treatment-plan .flex-div>div {
+    width: 50%;
+}
+
+.treatment-plan .flex-div>div.client-name {
+    text-align: left;
+    width: 50%;
+    display: flex;
+}
+
+.treatment-plan .flex-div>div.client-name label {
+    width: 100%;
+    max-width: max-content;
+}
+
+.treatment-plan .flex-div>div.date {
+    text-align: right;
+}
+
+.treatment-plan .row1 .client-name input {
+    width: 80%;
+}
+
+.treatment-plan .row1 {
+    text-align: center;
+}
+
+.treatment-plan .row2 label:nth-child(1) {
+    font-size: 16px;
+}
+
+.treatment-plan .row2 input {
+    margin-left: 15px;
+}
+
+.treatment-plan .row2 input+label {
+    margin-left: 3px;
+}
+
+.treatment-plan .row2 label {
+    font-size: 15px;
+}
+
+.treatment-plan .top-part {
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.treatment-plan .top-part {
+    margin-bottom: 30px;
+}
+
+.treatment-plan .row2.mb_30 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.treatment-plan .row1 {
+    display: flex;
+    width: 100%;
+}
+
+.treatment-plan .row1 .date {
+    width: 100%;
+}
+
+.treatment-plan .content {
+    border: 3px solid #fff;
+    padding: 20px;
+    background: #fff;
+}
+
+.treatment-plan input,
+.treatment-plan textarea {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #333;
+}
+
+.treatment-plan table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.treatment-plan label,
+.treatment-plan h3 {
+    font-size: 16px;
+    margin: 0px;
+    font-weight: bold;
+    color: #000;
+}
+
+.treatment-plan table td {
+    width: 50%;
+    padding: 6px 10px;
+    border: 2px solid #207ac7;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+.treatment-plan-new table td {
+    width: auto;
+    padding: 6px 10px;
+    border: 2px solid #207ac7;
+    border-collapse: collapse;
+    vertical-align: top;
+}
+
+.treatment-plan .flex-div>span {
+    flex: auto;
+}
+
+.treatment-plan table td .flex-div span {
+    width: 100%;
+}
+
+.treatment-plan .flex-div.first span:nth-child(1) label {
+    font-weight: 700;
+}
+
+.treatment-plan .flex-div>span:nth-child(1) {
+    width: 100%;
+    max-width: 100%;
+}
+
+.treatment-plan .flex-div>span:nth-child(2) input,
+.treatment-plan .flex-div>span:nth-child(2) textarea {
+    width: 100%;
+    padding: 5px 0px;
+}
+
+.treatment-plan .flex-div>span:nth-child(1) label {
+    font-weight: 700;
+}
+
+.treatment-plan .flex-div.first span:nth-child(1) label {
+    font-weight: 700;
+}
+
+.treatment-plan section {
+    box-shadow: 0px 0px 11px 0px #ccc;
+}
+
+.treatment-plan textarea {
+    resize: vertical;
+}
+
+.treatment-plan table td .flex-div {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+/*----------------bottom button css start................*/
+.treatment-plan label,
+.treatment-plan h3 {
+    font-size: 16px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.treatment-plan .section_bottom .flex-div.button-row {
+    margin: 30px auto 0px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.treatment-plan .section_bottom .flex-div.button-row div {
+    flex: auto;
+    max-width: max-content;
+    width: auto;
+}
+
+.treatment-plan .section_bottom .flex-div.button-row div a,
+.treatment-plan .section_bottom .flex-div.button-row div button {
+    padding: 11px 20px;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.treatment-plan .section_bottom .flex-div.button-row div a i.fas,
+.treatment-plan .section_bottom .flex-div.button-row div button i.fas {
+    margin-right: 6px;
+}
+
+.treatment-plan .section_bottom .mark-sign a {
+    background: #5cb85c;
+    color: #fff !important;
+}
+
+.treatment-plan .section_bottom .flex-div.button-row div.cancel button {
+    background: #d9534f;
+    color: #fff;
+}
+
+.treatment-plan .section_bottom .flex-div:nth-child(1) .col-item:nth-last-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    margin: 0;
+    text-align: left;
+    display: block;
+    padding: 0px 0px 0px;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 250px;
+}
+
+.info-details {
+    text-align: left;
+    float: right;
+    width: 100%;
+    max-width: 320px;
+}
+
+.info-details p {
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+    line-height: 24px;
+}
+
+.info-details p {
+    color: #d9534f !important;
+    font-size: 17px !important;
+}
+
+.info-details ul {
+    margin: 0px auto 0px;
+    padding: 0;
+    display: block;
+}
+
+.info-details ul li {
+    list-style: none;
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.info-details ul li span,
+.info-details ul li a span {
+    font-weight: 700;
+    color: #207ac7;
+    margin-right: 5px;
+}
+
+.info-details ul li a {
+    color: #000;
+    text-decoration: none;
+    transition: 0.5s all ease-in-out;
+}
+
+.page-title h1 {
+    margin-top: 0px;
+    text-align: center;
+    color: #d9534f;
+    font-size: 30px;
+    text-transform: uppercase;
+    max-width: max-content;
+    margin: 0 auto;
+    position: relative;
+    padding: 0px 0px 30px;
+    font-weight: bold;
+}
+
+/*----------------footer button css start................*/
+.section_bottom {
+    margin: 30px auto 0px;
+    width: 100%;
+}
+
+.section_bottom label,
+.section_bottom table tr td,
+.section_bottom h3 {
+    font-size: 16px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.checkbox-area ul li label {
+    font-weight: 600;
+}
+
+.section_bottom .flex-div.button-row {
+    margin: 30px auto 0px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section_bottom .flex-div.button-row div {
+    flex: auto;
+    max-width: max-content;
+    width: auto;
+}
+
+.section_bottom .flex-div.button-row div a {
+    padding: 11px 20px;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+.section_bottom .flex-div.button-row div a i.fas {
+    margin-right: 6px;
+}
+
+.section_bottom .mark-sign a {
+    background: #5cb85c;
+    color: #fff !important;
+}
+
+.section_bottom .flex-div.button-row div.cancel a {
+    background: #d9534f;
+    color: #fff;
+}
+
+.section_bottom .flex-div:nth-child(1) .col-item:nth-last-child(1) {
+    display: flex;
+    flex-direction: column;
+}
+
+/*========================footer bottom===========================*/
+.footer-section {
+    margin: 30px auto 0px;
+    box-shadow: 0px -5px 6px -4px #ccc;
+    padding: 20px 0px;
+}
+
+.footer-section .flex-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section .flex-div .col-item:nth-child(2) p {
+    text-align: right;
+}
+
+.footer-section .flex-div .col-item {
+    flex: auto;
+    width: auto;
+}
+
+.footer-section .flex-div .col-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-section .flex-div .col-item p a {
+    color: #207ac7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.flex-div2.row-flex:nth-child(2) .col-item:nth-child(2) {
+    width: 14%;
+}
+
+.section_bottom .flex-div span:nth-child(1) {
+    width: auto;
+}
+
+.save-prog button {
+    background: #483D8B;
+    color: #fff !important;
+}
+
+.print button {
+    background: #467fd0;
+    color: #fff !important;
+}
+
+@media only screen and (max-width: 768px) {
+    ::placeholder {
+        font-size: 14px !important;
+    }
+
+    .treatment-plan .page-title h1 {
+        font-size: 20px;
+    }
+
+    .treatment-plan .row1.flex-div>div.client-name label {
+        width: 100%;
+        max-width: max-content;
+    }
+
+    .treatment-plan .flex-div>div.client-name {
+        width: 100%;
+    }
+
+    .treatment-plan .row1 {
+        text-align: left;
+        row-gap: 10px;
+    }
+
+    .treatment-plan label,
+    .treatment-plan h3 {
+        font-size: 14px;
+    }
+
+    .treatment-plan .flex-div>div.date {
+        text-align: left;
+    }
+
+    .treatment-plan .flex-div>div {
+        width: 100%;
+    }
+
+    .treatment-plan .flex-div>div.client-name {
+        text-align: left;
+        display: flex;
+    }
+
+    .treatment-plan .flex-div>div.client-name label {
+        width: 100%;
+        max-width: max-content;
+        max-width: -moz-max-content;
+        margin-right: 10px;
+    }
+
+    .treatment-plan .row2 label:nth-child(1) {
+        font-size: 14px;
+    }
+
+    .treatment-plan .row2.mb_30 {
+        justify-content: flex-start;
+    }
+
+    .treatment-plan .flex-div>span:nth-child(2) input,
+    .treatment-plan .flex-div>span:nth-child(2) textarea {
+        padding: 0px 0px;
+    }
+
+    .treatment-plan section {
+        margin-top: 30px;
+    }
+
+    .treatment-plan .row2.mb_30 span:nth-child(2) label:nth-child(2) {
+        margin-right: 10px;
+    }
+
+    .treatment-plan .section_bottom>div {
+        flex-direction: row !important;
+        row-gap: 10px !important;
+        column-gap: 10px;
+    }
+
+    .section_8 .table-box {
+        margin: 0px auto 0px;
+        width: 100%;
+        overflow: auto;
+    }
+
+    .section_7 .table-box table td,
+    .section_7 .table-box table th {
+        font-size: 14px;
+    }
+
+    .treatment-plan .section_bottom .flex-div.button-row div a {
+        padding: 8px 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+    }
+
+    .treatment-plan .section_bottom .flex-div.button-row {
+        justify-content: space-evenly;
+    }
+
+    .treatment-plan .section_bottom {
+        margin: 50px auto 20px;
+    }
+
+    .logo img {
+        max-width: 250px;
+    }
+
+    .section_bottom {
+        margin: 0px auto 0px;
+    }
+
+    .section_bottom .flex-div.button-row {
+        flex-direction: row;
+        justify-content: center;
+        row-gap: 15px;
+        column-gap: 15px;
+    }
+
+    .section_bottom .flex-div.button-row div a {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .footer-section .flex-div {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .footer-section .flex-div .col-item p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .footer-section .flex-div .col-item:nth-child(2) p {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .footer-section .flex-div {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .footer-section {
+        margin: 40px auto 0px;
+        box-shadow: 0px -5px 6px -4px #ccc;
+        padding: 20px 0px 0px;
+    }
+
+    section .box.box-last_2 {
+        margin-top: 10px;
+    }
+
+    section .box.box-last_2 .flex-div {
+        column-gap: 0px;
+    }
+
+    /*------------------header responsive css ----------------*/
+    .logo {
+        text-align: center;
+    }
+
+    .flex-div {
+        align-items: center;
+        padding: 0px 15px 15px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-div .col-item {
+        width: 100%;
+        margin: 0px auto 20px;
+    }
+
+    .flex-div .info-details {
+        text-align: center;
+        float: none;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .col-item:nth-child(2) {
+        width: 100% !important;
+    }
+
+    .col-item .info-details ul li {
+        font-size: 14px;
+    }
+
+    .page-title h1 {
+        font-size: 16px;
+        padding: 0px 0px 1
+    }
+}
+
+@media only screen and (max-width: 580px) {
+
+    .treatment-plan table tr:nth-child(1) td,
+    .treatment-plan table tr:nth-child(2) td {
+        display: block;
+        width: 100.5%;
+        border-bottom: none;
+        margin: 0 auto 0px -1px;
+    }
+
+    .treatment-plan .row1 .date {
+        column-gap: 1%;
+        width: 100%;
+    }
+
+    .treatment-plan .flex-div {
+        flex-direction: column;
+    }
+
+    .treatment-plan .row2.mb_30 {
+        flex-direction: column;
+    }
+
+    .treatment-plan .row2 label:nth-child(1) {
+        text-align: left;
+        width: 100%;
+    }
+
+    .treatment-plan .row2.mb_30 span {
+        width: 100%;
+        text-align: center;
+    }
+
+    .treatment-plan .row2 input {
+        margin-left: 0px;
+    }
+
+    section.section_bottom {
+        border: none;
+        box-shadow: none;
+    }
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.rbt label {
+    font-weight: 400;
+    font-style: italic;
+}
+thead td{
+    font-weight: 700;
+}
+.extra td{
+    width: auto!important;
+   
+}
+.evaluation ul li{
+    font-weight: 700;
+    font-style: italic;
+}
+.text-danger{
+    font-size: 14px;
+    font-style: italic;
+    text-transform: capitalize;
+}
+ol li{
+    margin-bottom: 8px;
+}
+p{
+    margin-bottom: 8px;
+}
+.title.text-center{
+    font-size: 20px;
+    color: #dc3545;
+}
+.select-area select {
+    width: 100%;
+    border: 2px solid #207ac7;
+    padding: 8px 1px;
+    margin: 10px auto 0px;
+}
+table td select {
+    width: 100%;
+    border: none;
+}
+input[type="text"]{
+    width: 100%;
+    display: block;
+}

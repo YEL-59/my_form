@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCP Communication Form</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="./form-style.css">
+</head>
+
+<body>
+  <div class="treatment-plan">
+    <div class="content">
+      <!-- headers -->
+      <div class="flex-div">
+        <div class="col-item">
+          <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+        </div>
+        <div class="col-item">
+          <div class="info-details">
+            <ul>
+              <li> <span>Mail:</span>4001 Stableglen DR Rockwall, TX 75032</li>
+              <li><a href="mailto:info@amrextherapypm.com"> <span>Email:</span>info@amrextherapypm.com</a>
+              </li>
+              <li><span>Phone:</span> (469) 215-1101</li>
+              <li><a href="fax:732-276-9878"><span>Fax:</span>732-276-9878</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- headers -->
+      <form action="" method="POST" id="form_38">
+        @csrf
+        <input type="hidden" name="sessionid" value="{{ $session_id }}">
+
+        <div class="page-title mb_40">
+            <h1>PCP Communication Form</h1>
+        </div>
+        <div class="top-part">
+            <div class="d-flex justify-content-between">
+                <label class="row">Client Name: <input type="text" class="col-7" name="name"
+                  style="border-bottom: 2px solid black;"></label>
+                <label>DOB: <input type="date" class="" name="dob"
+                  style="border-bottom: 1px solid blue;"></label>
+            </div>
+            <label class="row mt-4">Dr.:<input type="text" class="col-3" name="dr_name"
+              style="border-bottom: 2px solid black;"></label>
+        </div>
+        <div class="top-part">
+            <p>This patient, <input type="text" class="w-25 d-inline" name="patient_name"
+              style="border-bottom: 2px solid black;">,
+                was seen at Clarity Behavioral Health Medical Clinic on <input type="date" class="w-auto d-inline" name="date"
+                style="border-bottom: 2px solid black;">, (date).
+                <br><br>
+                Findings,
+                <textarea name="findings" class="form-control border border-primary" placeholder="Enter Here..."></textarea>
+                <br>
+                Diagnosis:
+                <textarea name="diagnosis" class="form-control border border-primary" placeholder="Enter Here..."></textarea>
+            </p>
+        </div>
+        <div class="top-part">
+            <table cellpadding="0" cellspacing="0" class="extra">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label></label>
+                        </td>
+                        <td><label>Medication(s) Prescribed</label></td>
+                        <td>
+                            <label></label>
+                        </td>
+                        <td><label>Medication(s) Prescribed</label></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>1.</label>
+                        </td>
+                        <td><input name="medication"  type="text" placeholder="Enter Here..."></td>
+                        <td>
+                            <label>1.</label>
+                        </td>
+                        <td><input name="medication_1" type="text" placeholder="Enter Here..."></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>2.</label>
+                        </td>
+                        <td><input name="medication_2"  type="text" placeholder="Enter Here..."></td>
+                        <td>
+                            <label>2.</label>
+                        </td>
+                        <td><input name="medication_3" type="text" placeholder="Enter Here..."></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>3.</label>
+                        </td>
+                        <td><input name="medication_4"  type="text" placeholder="Enter Here..."></td>
+                        <td>
+                            <label>3.</label>
+                        </td>
+                        <td><input name="medication_5" type="text" placeholder="Enter Here..."></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>4.</label>
+                        </td>
+                        <td><input name="medication_6"  type="text" placeholder="Enter Here..."></td>
+                        <td>
+                            <label>4.</label>
+                        </td>
+                        <td><input name="medication_7"  type="text" placeholder="Enter Here..."></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="top-part">
+          <p> Recommendation(s):
+            <textarea name="recommendations" class="form-control border border-primary" placeholder="Enter Here..."></textarea></p>
+            
+            
+        </div>
+        <div class="top-part d-flex justify-content-between">
+          <p class="row">Psychiatrist Name: <input type="text" class="col-6" name="psychiatrist_name"
+            style="border-bottom: 2px solid black;"></>
+            <p>Signature: <a href="#" data-target="#signatureModal" data-toggle="modal">Add Signature<i
+                        class="fa fa-signature"></i></a></p>
+            <p>Date: <input type="date" name="date_5" class="border-primary border-bottom"> </p>
+        </div>
+
+
+
+
+        <div class="section_bottom">
+            <div class="button-row flex-div">
+                <div class="save-prog"><button type="submit"><span class="cloud-icon"><i
+                                class="fas fa-cloud"></i></span>
+                        Save</button></div>
+                <div class="print"><button type="button"><span class="print-icon"><i
+                                class="fas fa-print"></i></span>Print</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="signatureModal" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Add signature</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#drawsig">Draw</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#uploadsig">Upload</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="drawsig">
+                                <div class="row mb-2">
+                                    <div class="col-md-12">
+                                        <canvas id="sig-canvas" height="120" style="width: 100%;"></canvas>
+                                    </div>
+                                    <input type="hidden" class="form-control-file sing_draw" name="sing_draw">
+                                </div>
+                                <button type="button" class="btn btn-danger p-2"
+                                    id="sig-clearBtn">Clear</button>
+                            </div>
+                            <div class="tab-pane fade" id="uploadsig">
+                                <label>Upload File</label>
+                                <input type="file" class="form-control-file" name="updload_sign">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Add
+                            Signature
+                        </button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- signature modal caregiver -->
+        <div class="modal fade" id="signatureModal2" data-backdrop="static">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>Add signature</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#drawsig2">Draw</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#uploadsig2">Upload</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="drawsig2">
+                                <div class="row mb-2">
+                                    <div class="col-md-12">
+                                        <canvas id="sig-canvas2" height="120"
+                                            style="width: 100%;"></canvas>
+                                    </div>
+                                    <input type="hidden" class="form-control-file sing_draw2"
+                                        name="sing_draw2">
+                                </div>
+                                <button type="button" class="btn btn-danger p-2"
+                                    id="sig-clearBtn2">Clear</button>
+                            </div>
+                            <div class="tab-pane fade" id="uploadsig2">
+                                <label>Upload File</label>
+                                <input type="file" class="form-control-file" name="updload_sign2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Add
+                            Signature
+                        </button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @csrf
+    </form>
+      <div class="footer-section">
+        <div class="flex-div">
+          <div class="col-item">
+            <p>Amrex Therapy Corporation
+            </p>
+          </div>
+          <div class="col-item">
+            <p> <a href="tel:(469) 215-1101">Phone: (469) 215-1101,</a> &nbsp;<a href="mailto:info@amrextherapypm.com">
+                <span>Email:</span>
+                info@amrextherapypm.com,</a>&nbsp; <a href="fax:732-276-9878"> Fax:
+                732-276-9878,</a>&nbsp; <a href="https://amrextherapypm.com/index.html">amrextherapypm.com</a> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- signature modal -->
+  <div class="modal fade" id="signatureModal" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Add signature</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#drawsig">Draw</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#uploadsig">Upload</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="drawsig">
+              <div class="row mb-2">
+                <div class="col-md-12">
+                  <canvas id="sig-canvas" height="120" style="width: 100%;"></canvas>
+                </div>
+              </div>
+              <button type="button" class="btn btn-danger p-2" id="sig-clearBtn">Clear</button>
+            </div>
+            <div class="tab-pane fade" id="uploadsig">
+              <label>Upload File</label>
+              <input type="file" class="form-control-file">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save
+            Signature</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ signature modal -->
+  <!-- Jq Files -->
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <!-- Signature -->
+  <script>
+    (function () {
+      window.requestAnimFrame = (function (callback) {
+        return window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.oRequestAnimationFrame ||
+          window.msRequestAnimaitonFrame ||
+          function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+          };
+      })();
+      var canvas = document.getElementById("sig-canvas");
+      var ctx = canvas.getContext("2d");
+      ctx.strokeStyle = "#222222";
+      ctx.lineWidth = 4;
+      var drawing = false;
+      var mousePos = {
+        x: 0,
+        y: 0
+      };
+      var lastPos = mousePos;
+      canvas.addEventListener("mousedown", function (e) {
+        drawing = true;
+        lastPos = getMousePos(canvas, e);
+      }, false);
+      canvas.addEventListener("mouseup", function (e) {
+        drawing = false;
+      }, false);
+      canvas.addEventListener("mousemove", function (e) {
+        mousePos = getMousePos(canvas, e);
+      }, false);
+      // Add touch event support for mobile
+      canvas.addEventListener("touchstart", function (e) {}, false);
+      canvas.addEventListener("touchmove", function (e) {
+        var touch = e.touches[0];
+        var me = new MouseEvent("mousemove", {
+          clientX: touch.clientX,
+          clientY: touch.clientY
+        });
+        canvas.dispatchEvent(me);
+      }, false);
+      canvas.addEventListener("touchstart", function (e) {
+        mousePos = getTouchPos(canvas, e);
+        var touch = e.touches[0];
+        var me = new MouseEvent("mousedown", {
+          clientX: touch.clientX,
+          clientY: touch.clientY
+        });
+        canvas.dispatchEvent(me);
+      }, false);
+      canvas.addEventListener("touchend", function (e) {
+        var me = new MouseEvent("mouseup", {});
+        canvas.dispatchEvent(me);
+      }, false);
+
+      function getMousePos(canvasDom, mouseEvent) {
+        var rect = canvasDom.getBoundingClientRect();
+        return {
+          x: mouseEvent.clientX - rect.left,
+          y: mouseEvent.clientY - rect.top
+        }
+      }
+
+      function getTouchPos(canvasDom, touchEvent) {
+        var rect = canvasDom.getBoundingClientRect();
+        return {
+          x: touchEvent.touches[0].clientX - rect.left,
+          y: touchEvent.touches[0].clientY - rect.top
+        }
+      }
+
+      function renderCanvas() {
+        if (drawing) {
+          ctx.moveTo(lastPos.x, lastPos.y);
+          ctx.lineTo(mousePos.x, mousePos.y);
+          ctx.stroke();
+          lastPos = mousePos;
+        }
+      }
+      // Prevent scrolling when touching the canvas
+      document.body.addEventListener("touchstart", function (e) {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, false);
+      document.body.addEventListener("touchend", function (e) {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, false);
+      document.body.addEventListener("touchmove", function (e) {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, false);
+      (function drawLoop() {
+        requestAnimFrame(drawLoop);
+        renderCanvas();
+      })();
+
+      function clearCanvas() {
+        canvas.width = canvas.width;
+      }
+      // Set up the UI
+      var sigText = document.getElementById("sig-dataUrl");
+      var sigImage = document.getElementById("sig-image");
+      var clearBtn = document.getElementById("sig-clearBtn");
+      clearBtn.addEventListener("click", function (e) {
+        clearCanvas();
+        sigText.innerHTML = "Data URL for your signature will go here!";
+        sigImage.setAttribute("src", "");
+      }, false);
+    })();
+  </script>
+</body>
+
+</html>

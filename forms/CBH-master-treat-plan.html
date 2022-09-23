@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Treatment Plan</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="./form-style.css">
+</head>
+<body>
+  <div class="treatment-plan">
+    <div class="content">
+      <!-- headers -->
+      <div class="flex-div">
+        <div class="col-item">
+          <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+        </div>
+        <div class="col-item">
+          <div class="info-details">
+            <ul>
+              <li> <span>Mail:</span>4001 Stableglen DR Rockwall, TX 75032</li>
+              <li><a href="mailto:info@amrextherapypm.com"> <span>Email:</span>info@amrextherapypm.com</a>
+              </li>
+              <li><span>Phone:</span> (469) 215-1101</li>
+              <li><a href="fax:732-276-9878"><span>Fax:</span>732-276-9878</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- headers -->
+      <form action="" method="POST" id="form_44">
+        @csrf
+        <input type="hidden" name="sessionid" value="{{ $session_id }}">
+
+        <div class="page-title mb_40">
+          <h1> Master Treatment Plan </h1>
+        </div>
+        <div class="top-part">
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td>
+                  <label> Client Name: <input type="text" name="client_name" placeholder="Enter Here..."></label>
+                </td>
+                <td>
+                  <label> Client MR# <input type="text" name="client_mr" placeholder="Enter Here...">
+                  </label>
+                </td>
+                <td>
+                  <label> Intake Date: <input type="date" name="intake_date" placeholder="Enter Here...">
+                  </label>
+                </td>
+                <td>
+                  <label> Completion Date: <input type="date" name="completion_date">
+                  </label>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <label>*Social Security #: <input type="text" name="social_security" placeholder="Enter Here..."></label>
+                </td>
+                <td>
+                  <label>Medicaid # or Group Insurance #: <input type="text" name="medicaid" placeholder="Enter Here..."></label>
+                </td>
+                <td>
+                  <label>Gender:
+                    <div class="form-check-inline d-block">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="yn">Male
+                      </label>
+                    </div>
+                  </label>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_1">Female
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <label>Date of Birth: <input type="date" name="dob">
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Street Address:</label>
+                  <textarea name="street_address" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td>
+                  <label>City: <input type="text" name="city" placeholder="Enter Here...">
+                  </label>
+                </td>
+                <td>
+                  <label>State: <input type="text" name="state" placeholder="Enter Here...">
+                  </label>
+                </td>
+                <td>
+                  <label>Contact Phone #:<input type="text" name="contact_phone" placeholder="Enter Here...">
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Parent/Guardian:
+                  </label>
+                </td>
+                <td><input type="text" name="parent" placeholder="Enter Here..."></td>
+                <td>
+                  <label>Primary Clinician:
+                  </label>
+                </td>
+                <td>
+                  <input type="text" name="primary_clinician" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td colspan="3"><label>Effective Date: (Date certified by Licensed Practitioner of Healing Arts)</label>
+                </td>
+                <td>
+                  <input type="date" name="date">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <h5 class="title">Treatment Development Process:</h5>
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <label> Problems, Strengths/Weakness, and Intervention sections developed with participation by the
+                    Client and the Client’s parent/caregiver in</label>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_2">Client Home
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_3">Client School
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_4">Office
+                    </label>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Primary Clinician: <input type="text" name="primary_clinician_1" placeholder="Enter Here...">
+                  </label>
+                </td>
+                <td>
+                  <label>Date: <input type="date" name="date_1">
+                  </label>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <label> Based on Face to Face contact with: </label>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_5">Client
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_6">Parent/Guardian
+                    </label>
+                  </div>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_7">Other
+                    </label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <h5 class="title">Diagnostic Impressions:</h5>
+          <table cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td>
+                  <label> F-Codes:</label>
+                </td>
+                <td>
+                  <label> Diagnosis:</label>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="text" name="f_codes" placeholder="Enter Here..."></td>
+                <td><input type="text" name="diagnosis"placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="f_codes_1"placeholder="Enter Here..."></td>
+                <td><input type="text" name="diagnosis_1"placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="f_codes_2"placeholder="Enter Here..."></td>
+                <td><input type="text" name="diagnosis_2"placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><input type="text" name="f_codes_3"placeholder="Enter Here..."></td>
+                <td><input type="text" name="diagnosis_3"placeholder="Enter Here..."></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <h5 class="title">Certification Statement:</h5>
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_8">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <label>This Client is at risk for a more intensive, restrictive and costly mental health
+                    placement.</label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_9">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <label>This Client’s condition/functional level cannot be improved with less costly services.</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <h5 class="title">Barriers to Treatment:</h5>
+          <table cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_10">
+                    </label>
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_11">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <table cellpadding="0" cellspacing="0">
+            <tbody>
+              <tr>
+                <td class="text-center">
+                  <label>Strengths</label>
+                </td>
+                <td class="text-center"><label>Weakness</label></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody class="text-center">
+              <tr>
+                <td colspan="8"></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <label>Type of Service</label>
+                </td>
+                <td><label>Billing Code</label></td>
+                <td colspan="2"><label>Amount</label></td>
+                <td><label>Frequency</label></td>
+                <td><label>Duration</label></td>
+                <td><label>Provider Title</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_12">
+                    </label>
+                  </div>
+                </td>
+                <td><label>TBOS (Therapeutic Behavioral On-Site)</label></td>
+                <td>
+                  <label>(H2019 HO)</label>
+                </td>
+                <td><input type="text" name="h2019_ho"></td>
+                <td><label>Units</label></td>
+                <td><label>Weekly</label></td>
+                <td><label>6 Months</label></td>
+                <td><label>Therapist</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_13">
+                    </label>
+                  </div>
+                </td>
+                <td><label>Individual Outpatient</label></td>
+                <td>
+                  <label>(H2019 HR)</label>
+                </td>
+                <td><input type="text" name="h2019_hr"></td>
+                <td><label>Units</label></td>
+                <td><label>Weekly</label></td>
+                <td><label>6 Months</label></td>
+                <td><label>Therapist</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_14">
+                    </label>
+                  </div>
+                </td>
+                <td><label>Master Treatment Plan</label></td>
+                <td>
+                  <label>(H0032)</label>
+                </td>
+                <td><input type="text" name="h0032"></td>
+                <td><label>Units</label></td>
+                <td><label>1 time</label></td>
+                <td><label>Per Year</label></td>
+                <td><label>Therapist</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_15">
+                    </label>
+                  </div>
+                </td>
+                <td><label>Treatment Plan Review</label></td>
+                <td>
+                  <label>(H0032 TS)</label>
+                </td>
+                <td><input type="text" name="h0032_ts"></td>
+                <td><label>Units</label></td>
+                <td><label>2 times</label></td>
+                <td><label>Per Year</label></td>
+                <td><label>Therapist</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_16">
+                    </label>
+                  </div>
+                </td>
+                <td><label>Brief Behavioral Health Status Exam</label></td>
+                <td>
+                  <label>(H2010 HO)</label>
+                </td>
+                <td><input type="text" name="h2010_H0_1"></td>
+                <td><label>Units</label></td>
+                <td><label>1 time</label></td>
+                <td><label>Per Year</label></td>
+                <td><label>Assessor</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_17">
+                    </label>
+                  </div>
+                </td>
+                <td><label>Psychiatric Evaluation</label></td>
+                <td>
+                  <label>(H2000 HP)</label>
+                </td>
+                <td><input type="text" name="h2000_hp"></td>
+                <td><label>Time</label></td>
+                <td><label>Yearly</label></td>
+                <td><label>Per Year</label></td>
+                <td><label>Psychiatrist</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_18">
+                    </label>
+                  </div>
+                </td>
+                <td><label>Medication Management</label></td>
+                <td>
+                  <label>(T1015)</label>
+                </td>
+                <td><input type="text" name="t1015"></td>
+                <td><label>Unit</label></td>
+                <td><label>Monthly</label></td>
+                <td><label>6 Months</label></td>
+                <td><label>Therapist</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_19">
+                    </label>
+                  </div>
+                </td>
+                <td><label>Group Therapy</label></td>
+                <td>
+                  <label>(H2019 HQ)</label>
+                </td>
+                <td><input type="text" name="h2019_hq"></td>
+                <td><label>Units</label></td>
+                <td><label>Weekly</label></td>
+                <td><label>6 Months</label></td>
+                <td><label>Therapist</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_20">
+                    </label>
+                  </div>
+                </td>
+                <td><label>Limited Functional Asmt (CFARS)</label></td>
+                <td>
+                  <label>(H0031)</label>
+                </td>
+                <td><input type="text" name="h0031"></td>
+                <td><label>Unit</label></td>
+                <td><label>3 times</label></td>
+                <td><label>Per Year</label></td>
+                <td><label>Therapist</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_21">
+                    </label>
+                  </div>
+                </td>
+                <td><label>Bio-Psychosocial Evaluation</label></td>
+                <td>
+                  <label>(H0031 HN)</label>
+                </td>
+                <td><input type="text" name="h0031_hn"></td>
+                <td><label>Unit</label></td>
+                <td><label>1 time</label></td>
+                <td><label>Per Year</label></td>
+                <td><label>Assessor</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_22">
+                    </label>
+                  </div>
+                </td>
+                <td><label>In-Depth Assessment</label></td>
+                <td>
+                  <label>(H0031 HO)
+                    (H0031 TS)</label>
+                </td>
+                <td><input type="text" name="h0031_ts"></td>
+                <td><label>Unit</label></td>
+                <td><label>1 time</label></td>
+                <td><label>Per Year</label></td>
+                <td><label>Therapist</label></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <h5 class="title">Attachments:</h5>
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_23">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <label>Problem #1:</label>
+                </td>
+                <td>
+                  <label><input type="text" name="problem_1"></label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_24">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <label>Problem #2:</label>
+                </td>
+                <td>
+                  <label><input type="text" name="problem_2"></label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_25">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <label>Problem #3:</label>
+                </td>
+                <td>
+                  <label><input type="text" name="problem_3"></label>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="form-check-inline">
+                    <label class="form-check-label">
+                      <input type="checkbox" class="form-check-input" name="yn_26">
+                    </label>
+                  </div>
+                </td>
+                <td>
+                  <label>Problem #4:</label>
+                </td>
+                <td>
+                  <label><input type="text" name="problem_4"></label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <h5 class="title">Discharge Criteria:</h5>
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td colspan="3"><label>At this point in the Client’s care, the following are considerations for the
+                    discharge at
+                    case closing:</label></td>
+              </tr>
+              <tr>
+                <td><label>Problem Areas</label></td>
+                <td><label>Discharge Goals</label></td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Problem #1: <input type="text" name="problem_5" placeholder="Enter Here...">
+                  </label>
+                </td>
+                <td>
+                  <input type="text" name="discharge_goals" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Problem #2: <input type="text" name="problem_6" placeholder="Enter Here...">
+                  </label>
+                </td>
+                <td>
+                  <input type="text" name="discharge_goals_1" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Problem #3: <input type="text" name="problem_7" placeholder="Enter Here...">
+                  </label>
+                </td>
+                <td>
+                  <input type="text" name="discharge_goals_2" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Problem #4: <input type="text" name="problem_8" placeholder="Enter Here...">
+                  </label>
+                </td>
+                <td>
+                  <input type="text" name="discharge_goals_3" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Anticipated Length of Services:
+                  </label>
+                </td>
+                <td>
+                  <input type="text" name="alo_services" placeholder="Enter Here...">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <h5 class="title">
+            Treatment Problem Sheet
+          </h5>
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td>
+                  <label>Problem #1:
+                  </label>
+                </td>
+                <td>
+                  <input type="text" name="problem_9" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Evidenced by:</label>
+                </td>
+                <td>
+                  <input type="text" name="evidenced_by" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Admission Baseline:</label>
+                </td>
+                <td>
+                  <input type="text" name="admission_baseline" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Target Goal:</label>
+                </td>
+                <td>
+                  <input type="text" name="target_goal" placeholder="Enter Here...">
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td><label>Obj. # </label></td>
+                <td><label>Short Term Objective</label></td>
+                <td><label>Target Date</label></td>
+                <td><label>Interventions</label></td>
+              </tr>
+              <tr>
+                <td><label>1.</label></td>
+                <td> <textarea name="st_objective" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_2"></td>
+                <td> <input type="text" name="interventions" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>2.</label></td>
+                <td> <textarea name="st_objective_1" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_3"></td>
+                <td> <input type="text" name="interventions_1" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>3.</label></td>
+                <td> <textarea name="st_objective_2" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_4"></td>
+                <td> <input type="text" name="interventions_2" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>4.</label></td>
+                <td> <textarea name="st_objective_3" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_5"></td>
+                <td> <input type="text" name="interventions_3" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>5.</label></td>
+                <td> <textarea name="st_objective_4" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date_6"></td>
+                <td> <input type="text" name="interventions_4" placeholder="Enter Here..."></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <h5 class="title">
+            Treatment Problem Sheet
+          </h5>
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td>
+                  <label>Problem #2:
+                  </label>
+                </td>
+                <td>
+                  <input type="text" name="problem_10" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Evidenced by:</label>
+                </td>
+                <td>
+                  <input type="text" name="evidenced_by_1" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Admission Baseline:</label>
+                </td>
+                <td>
+                  <input type="text" name="admission_baseline_1" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Target Goal:</label>
+                </td>
+                <td>
+                  <input type="text" name="target_goals_1" placeholder="Enter Here...">
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td><label>Obj. # </label></td>
+                <td><label>Short Term Objective</label></td>
+                <td><label>Target Date</label></td>
+                <td><label>Interventions</label></td>
+              </tr>
+              <tr>
+                <td><label>1.</label></td>
+                <td> <textarea name="st_objective_5" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_7"></td>
+                <td> <input type="text" name="Interventions_5" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>2.</label></td>
+                <td> <textarea name="st_objective_6" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_8"></td>
+                <td> <input type="text" name="Interventions_6" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>3.</label></td>
+                <td> <textarea name="st_objective_7" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_9"></td>
+                <td> <input type="text" name="Interventions_7" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>4.</label></td>
+                <td> <textarea name="st_objective_8" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_10"></td>
+                <td> <input type="text" name="Interventions_8" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>5.</label></td>
+                <td> <textarea name="st_objective_9" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_11"></td>
+                <td> <input type="text" name="Interventions_9" placeholder="Enter Here..."></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <h5 class="title">
+            Treatment Problem Sheet
+          </h5>
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td>
+                  <label>Problem #3:
+                  </label>
+                </td>
+                <td>
+                  <input type="text" name="problem_11" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Evidenced by:</label>
+                </td>
+                <td>
+                  <input type="text" name="evidenced_by_2" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Admission Baseline:</label>
+                </td>
+                <td>
+                  <input type="text" name="admission_baseline_2" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Target Goal:</label>
+                </td>
+                <td>
+                  <input type="text" name="target_goals_2" placeholder="Enter Here...">
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td><label>Obj. # </label></td>
+                <td><label>Short Term Objective</label></td>
+                <td><label>Target Date</label></td>
+                <td><label>Interventions</label></td>
+              </tr>
+              <tr>
+                <td><label>1.</label></td>
+                <td> <textarea name="st_objective_10" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_12"></td>
+                <td> <input type="text" name="interventions_10" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>2.</label></td>
+                <td> <textarea name="st_objective_11" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_13"></td>
+                <td> <input type="text" name="interventions_11" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>3.</label></td>
+                <td> <textarea name="st_objective_12" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_14"></td>
+                <td> <input type="text" name="interventions_12" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>4.</label></td>
+                <td> <textarea name="st_objective_13" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_15"></td>
+                <td> <input type="text" name="interventions_13" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>5.</label></td>
+                <td> <textarea name="st_objective_14" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_16"></td>
+                <td> <input type="text" name="interventions_14" placeholder="Enter Here..."></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <h5 class="title">
+            Treatment Problem Sheet
+          </h5>
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td>
+                  <label>Problem #4:
+                  </label>
+                </td>
+                <td>
+                  <input type="text" name="problem_12" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Evidenced by:</label>
+                </td>
+                <td>
+                  <input type="text" name="evidenced_by_3" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Admission Baseline:</label>
+                </td>
+                <td>
+                  <input type="text" name="admission_baseline_3" placeholder="Enter Here...">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Target Goal:</label>
+                </td>
+                <td>
+                  <input type="text" name="target_goal_3" placeholder="Enter Here...">
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td><label>Obj. # </label></td>
+                <td><label>Short Term Objective</label></td>
+                <td><label>Target Date</label></td>
+                <td><label>Interventions</label></td>
+              </tr>
+              <tr>
+                <td><label>1.</label></td>
+                <td> <textarea name="st_objective_15" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_17"></td>
+                <td> <input type="text" name="interventions_15" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>2.</label></td>
+                <td> <textarea name="st_objective_16" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_18"></td>
+                <td> <input type="text" name="interventions_16" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>3.</label></td>
+                <td> <textarea name="st_objective_17" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_19"></td>
+                <td> <input type="text" name="interventions_17" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>4.</label></td>
+                <td> <textarea name="st_objective_18" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_20"></td>
+                <td> <input type="text" name="interventions_18" placeholder="Enter Here..."></td>
+              </tr>
+              <tr>
+                <td><label>5.</label></td>
+                <td> <textarea name="st_objective_19" class="form-control" placeholder="Enter Here..."></textarea>
+                </td>
+                <td> <input type="date" name="date_21"></td>
+                <td> <input type="text" name="interventions_19" placeholder="Enter Here..."></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <div class="top-part">
+          <h5 class=" title text-center">VERIFICATION PAGE</h5>
+          <div>
+            <p class="font-weight-bold">I have participated in the development of treatment objectives and the initial
+              discharge goals.
+              Furthermore, my signature indicates that I am willing to be involved in treatment and the achievement of
+              treatment goals. </p>
+          </div>
+          <table cellpadding="0" cellspacing="0" class="extra">
+            <tbody>
+              <tr>
+                <td class="pt-4"><a href="#" data-target="#signatureModal" data-toggle="modal">Add Signature<i class="fa fa-signature"></i></a>
+                  <p class="font-weight-bold">Client Signature</p>
+                  <label>I acknowledge by signing I have received a copy of this
+                    document</label>
+                </td>
+                <td><label>Date:</label><input type="date" name="date_22"></td>
+              </tr>
+
+              <tr>
+                <td class="pt-4"><a href="#" data-target="#signatureModal" data-toggle="modal">Add Signature<i class="fa fa-signature"></i></a>
+                  <p class="font-weight-bold">Parent/Guardian Signature</p>
+                  <label>I acknowledge by signing I have received a copy of this document</label>
+                </td>
+                <td><label>Date:</label><input type="date" name="date_23"></td>
+              </tr>
+              <tr>
+                <td class="pt-4"><a href="#" data-target="#signatureModal" data-toggle="modal">Add Signature<i class="fa fa-signature"></i></a>
+                  <p class="font-weight-bold">Therapist Signature and Credentials</p>
+                </td>
+                <td><label>Date:</label><input type="date" name="date_24"></td>
+              </tr>
+              <tr>
+                <td colspan="2" class="text-center"><label class="title ">STATEMENT OF ELIGIBILITY/MEDICAL
+                    NECESSITY:</label>
+                  <p class="pt-3 font-weight-bold text-left">I, treating Physician or Licensed Practitioner of Healing
+                    Arts certifies that the above named
+                    services are medically necessary and appropriate to Client’s diagnosis and treatment needs.</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="pt-4"><a href="#" data-target="#signatureModal" data-toggle="modal">Add Signature<i class="fa fa-signature"></i></a>
+                  <p class="font-weight-bold">Treating Physician/Licensed Practitioner of Healing Arts Signature</p>
+                </td>
+                <td><label>Date:</label><input type="date" name="date_2"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="section_bottom">
+          <div class="button-row flex-div">
+            <div class="save-prog"><button type="submit"><span class="cloud-icon"><i class="fas fa-cloud"></i></span>
+                Save</button></div>
+            <div class="print"><button type="button"><span class="print-icon"><i class="fas fa-print"></i></span>Print</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="signatureModal" data-backdrop="static">
+          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>Add signature</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#drawsig">Draw</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#uploadsig">Upload</a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="drawsig">
+                    <div class="row mb-2">
+                      <div class="col-md-12">
+                        <canvas id="sig-canvas" height="120" style="width: 100%;"></canvas>
+                      </div>
+                      <input type="hidden" class="form-control-file sing_draw" name="sing_draw">
+                    </div>
+                    <button type="button" class="btn btn-danger p-2" id="sig-clearBtn">Clear</button>
+                  </div>
+                  <div class="tab-pane fade" id="uploadsig">
+                    <label>Upload File</label>
+                    <input type="file" class="form-control-file" name="updload_sign">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Add
+                  Signature
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- signature modal caregiver -->
+        <div class="modal fade" id="signatureModal2" data-backdrop="static">
+          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4>Add signature</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+              <div class="modal-body">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#drawsig2">Draw</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#uploadsig2">Upload</a>
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="drawsig2">
+                    <div class="row mb-2">
+                      <div class="col-md-12">
+                        <canvas id="sig-canvas2" height="120" style="width: 100%;"></canvas>
+                      </div>
+                      <input type="hidden" class="form-control-file sing_draw2" name="sing_draw2">
+                    </div>
+                    <button type="button" class="btn btn-danger p-2" id="sig-clearBtn2">Clear</button>
+                  </div>
+                  <div class="tab-pane fade" id="uploadsig2">
+                    <label>Upload File</label>
+                    <input type="file" class="form-control-file" name="updload_sign2">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Add
+                  Signature
+                </button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        @csrf
+      </form>
+      <div class="footer-section">
+        <div class="flex-div">
+          <div class="col-item">
+            <p>Amrex Therapy Corporation
+            </p>
+          </div>
+          <div class="col-item">
+            <p> <a href="tel:(469) 215-1101">Phone: (469) 215-1101,</a> &nbsp;<a href="mailto:info@amrextherapypm.com">
+                <span>Email:</span>
+                info@amrextherapypm.com,</a>&nbsp; <a href="fax:732-276-9878"> Fax:
+                732-276-9878,</a>&nbsp; <a href="https://amrextherapypm.com/index.html">amrextherapypm.com</a> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- signature modal -->
+  <div class="modal fade" id="signatureModal" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Add signature</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="tab" href="#drawsig">Draw</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" href="#uploadsig">Upload</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="drawsig">
+              <div class="row mb-2">
+                <div class="col-md-12">
+                  <canvas id="sig-canvas" height="120" style="width: 100%;"></canvas>
+                </div>
+              </div>
+              <button type="button" class="btn btn-danger p-2" id="sig-clearBtn">Clear</button>
+            </div>
+            <div class="tab-pane fade" id="uploadsig">
+              <label>Upload File</label>
+              <input type="file" class="form-control-file">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save
+            Signature</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ signature modal -->
+  <!-- Jq Files -->
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <!-- Signature -->
+  <script>
+    (function () {
+      window.requestAnimFrame = (function (callback) {
+        return window.requestAnimationFrame ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame ||
+          window.oRequestAnimationFrame ||
+          window.msRequestAnimaitonFrame ||
+          function (callback) {
+            window.setTimeout(callback, 1000 / 60);
+          };
+      })();
+      var canvas = document.getElementById("sig-canvas");
+      var ctx = canvas.getContext("2d");
+      ctx.strokeStyle = "#222222";
+      ctx.lineWidth = 4;
+      var drawing = false;
+      var mousePos = {
+        x: 0,
+        y: 0
+      };
+      var lastPos = mousePos;
+      canvas.addEventListener("mousedown", function (e) {
+        drawing = true;
+        lastPos = getMousePos(canvas, e);
+      }, false);
+      canvas.addEventListener("mouseup", function (e) {
+        drawing = false;
+      }, false);
+      canvas.addEventListener("mousemove", function (e) {
+        mousePos = getMousePos(canvas, e);
+      }, false);
+      // Add touch event support for mobile
+      canvas.addEventListener("touchstart", function (e) {}, false);
+      canvas.addEventListener("touchmove", function (e) {
+        var touch = e.touches[0];
+        var me = new MouseEvent("mousemove", {
+          clientX: touch.clientX,
+          clientY: touch.clientY
+        });
+        canvas.dispatchEvent(me);
+      }, false);
+      canvas.addEventListener("touchstart", function (e) {
+        mousePos = getTouchPos(canvas, e);
+        var touch = e.touches[0];
+        var me = new MouseEvent("mousedown", {
+          clientX: touch.clientX,
+          clientY: touch.clientY
+        });
+        canvas.dispatchEvent(me);
+      }, false);
+      canvas.addEventListener("touchend", function (e) {
+        var me = new MouseEvent("mouseup", {});
+        canvas.dispatchEvent(me);
+      }, false);
+      function getMousePos(canvasDom, mouseEvent) {
+        var rect = canvasDom.getBoundingClientRect();
+        return {
+          x: mouseEvent.clientX - rect.left,
+          y: mouseEvent.clientY - rect.top
+        }
+      }
+      function getTouchPos(canvasDom, touchEvent) {
+        var rect = canvasDom.getBoundingClientRect();
+        return {
+          x: touchEvent.touches[0].clientX - rect.left,
+          y: touchEvent.touches[0].clientY - rect.top
+        }
+      }
+      function renderCanvas() {
+        if (drawing) {
+          ctx.moveTo(lastPos.x, lastPos.y);
+          ctx.lineTo(mousePos.x, mousePos.y);
+          ctx.stroke();
+          lastPos = mousePos;
+        }
+      }
+      // Prevent scrolling when touching the canvas
+      document.body.addEventListener("touchstart", function (e) {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, false);
+      document.body.addEventListener("touchend", function (e) {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, false);
+      document.body.addEventListener("touchmove", function (e) {
+        if (e.target == canvas) {
+          e.preventDefault();
+        }
+      }, false);
+      (function drawLoop() {
+        requestAnimFrame(drawLoop);
+        renderCanvas();
+      })();
+      function clearCanvas() {
+        canvas.width = canvas.width;
+      }
+      // Set up the UI
+      var sigText = document.getElementById("sig-dataUrl");
+      var sigImage = document.getElementById("sig-image");
+      var clearBtn = document.getElementById("sig-clearBtn");
+      clearBtn.addEventListener("click", function (e) {
+        clearCanvas();
+        sigText.innerHTML = "Data URL for your signature will go here!";
+        sigImage.setAttribute("src", "");
+      }, false);
+    })();
+  </script>
+</body>
+</html>

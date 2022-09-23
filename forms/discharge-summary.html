@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DISCHARGE SUMMARY</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./form-style.css" />
+  </head>
+
+  <body>
+    <div class="treatment-plan">
+      <div class="content">
+        <!-- headers -->
+        <div class="flex-div">
+          <div class="col-item">
+            <div class="logo">
+              <a href="#"><img src="images/logo.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="col-item">
+            <div class="info-details">
+              <ul>
+                <li><span>Mail:</span>4001 Stableglen DR Rockwall, TX 75032</li>
+                <li>
+                  <a href="mailto:info@amrextherapypm.com">
+                    <span>Email:</span>info@amrextherapypm.com</a
+                  >
+                </li>
+                <li><span>Phone:</span> (469) 215-1101</li>
+                <li>
+                  <a href="fax:732-276-9878"><span>Fax:</span>732-276-9878</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- headers -->
+        <form action="">
+          <div class="mb-3">
+            <div class="d-flex">
+              <div class="date d-flex gap-5">
+                <div class="start-date">
+                  <span
+                    ><label class="fw-bold">1) Session Date:</label>
+                    <input
+                      type="date"
+                      name="sdate"
+                      class="f_line border-primary border-bottom"
+                      value="mm/dd/yy"
+                  /></span>
+                </div>
+                <div class="discharge-date">
+                  <label class="fw-bold">Discharge Date:</label>
+                  <input
+                    type="date"
+                    name="disdate"
+                    class="border-primary border-bottom f_line"
+                    value="mm/dd/yy"
+                  />
+                </div>
+                <input
+                  type="hidden"
+                  name="sessionid"
+                  class="session_id"
+                  value="120427"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <div class="inner">
+              <div>
+                <h3 class="fs-6 fw-bold mb-2">
+                  2) What is the living situation at discharge?
+                </h3>
+                <div class="fill-area">
+                  <textarea
+                    placeholder="Enter the living situation at discharge..."
+                    name="livsit"
+                    class="w-100 border border-primary border-2 f_line"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <h3 class="fs-6 fw-bold mb-2">
+              3) What are the Strengths, Needs, Abilities and Preferences of the
+              individual?
+            </h3>
+            <div class="row">
+              <div class="lable-text col-1">
+                <p><strong>Strengths:?</strong></p>
+              </div>
+              <div class="fill-area col-11">
+                <input
+                  type="text"
+                  placeholder="Enter Strengths..."
+                  name="strength"
+                  class="w-100 border border-primary border-2 f_line"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="lable-text col-1">
+                <p><strong>Needs:?</strong></p>
+              </div>
+              <div class="fill-area col-11">
+                <input
+                  type="text"
+                  placeholder="Enter Needs..."
+                  name="needs"
+                  class="w-100 border border-primary border-2 f_line"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="lable-text col-1">
+                <p><strong>Abilities:? </strong></p>
+              </div>
+              <div class="fill-area col-11">
+                <input
+                  type="text"
+                  placeholder="Enter Abilities..."
+                  name="abilities"
+                  class="w-100 border border-primary border-2 f_line"
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="lable-text col-1">
+                <p><strong>Preferences:? </strong></p>
+              </div>
+              <div class="fill-area col-11">
+                <input
+                  type="text"
+                  placeholder="Enter Preferences..."
+                  name="pref"
+                  class="w-100 border border-primary border-2 f_line"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h3 class="fs-6 fw-bold mb-2">
+              4) What Services and support did Resilient Focused Family Therapy
+              Provide, while in care?
+            </h3>
+            <div class="fill-area">
+              <textarea
+                placeholder="Enter Services and support did Resilient Focused Family Therapy Provide, while in care..."
+                name="incare"
+                class="w-100 border border-2 border-primary f_line"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h3 class="fs-6 fw-bold mb-2">5) Significant findings</h3>
+            <div class="fill-area">
+              <textarea
+                placeholder="Enter Significant findings..."
+                name="sigfind"
+                class="w-100 border border-primary border-2 f_line"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h3 class="fs-6 fw-bold mb-2">6) Summary of goals achieved</h3>
+            <div class="fill-area">
+              <textarea
+                placeholder="Enter Summary of goals achieved..."
+                name="summgoal"
+                class="w-100 border border-primary border-2 f_line"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h3 class="fs-6 fw-bold mb-2">7) Summary of goals not achieved</h3>
+            <div class="fill-area">
+              <textarea
+                placeholder="Enter Summary of goals not achieved..."
+                name="summnot"
+                style="height: 77px"
+                class="w-100 border border-primary border-2 f_line"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h3 class="fs-6 fw-bold mb-2">8) Current support system</h3>
+            <div class="fill-area">
+              <textarea
+                placeholder="Enter Current support system..."
+                name="currss"
+                class="w-100 border border-primary border-2 f_line"
+              ></textarea>
+            </div>
+          </div>
+          <div class="mb-3">
+            <h3 class="fs-6 fw-bold mb-2">9) Overall Recommendations</h3>
+            <div class="fill-area">
+              <textarea
+                placeholder="Enter Overall Recommendations..."
+                name="overrec"
+                class="w-100 border border-primary border-2 f_line"
+              ></textarea>
+            </div>
+          </div>
+          <div class="mb-3">
+            <h3 class="fs-6 fw-bold mb-2">
+              10) What outside organization did you refer client too? If not
+              referred out, please explain.
+            </h3>
+            <div class="fill-area">
+              <textarea
+                placeholder="Enter outside organization did you refer client too? If not referred out, please explain..."
+                name="outsideorg"
+                class="w-100 border border-2 border-primary f_line"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h3 class="fs-6 fw-bold mb-2">
+              11) What is the plan of services, please include if an appointment
+              was scheduled (Please be specific)?
+            </h3>
+            <div class="fill-area">
+              <textarea
+                placeholder="Enter the plan of services, please include if an appointment was scheduled (Please be specific)?..."
+                name="planser"
+                class="w-100 border border-2 border-primary f_line"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h3 class="fs-6 fw-bold mb-2">12) Any medical needs post discharge?</h3>
+            <div class="fill-area">
+              <textarea
+                placeholder="Enter Any medical needs post discharge?..."
+                name="medneed"
+                class="w-100 border border-primary border-2 f_line"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h3 class="fs-6 fw-bold mb-2">
+              13) What is the reason for discontinuing services?
+            </h3>
+            <div class="fill-area">
+              <textarea
+                placeholder="Enter the reason for discontinuing services..."
+                name="discont"
+                class="w-100 border border-primary border-2 f_line"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h3 class="fs-6 fw-bold mb-2">14) Summary of Discharge</h3>
+            <div class="fill-area">
+              <textarea
+                placeholder="Enter Summary of Discharge..."
+                name="summdis"
+                class="w-100 border border-primary border-2 f_line"
+              ></textarea>
+            </div>
+          </div>
+          <a href="#" data-target="#signatureModal" data-toggle="modal"
+            >Add Signature<i class="fa fa-signature"></i
+          ></a>
+        </form>
+        <div class="footer-section">
+          <div class="flex-div">
+            <div class="col-item">
+              <p>Amrex Therapy Corporation</p>
+            </div>
+            <div class="col-item">
+              <p>
+                <a href="tel:(469) 215-1101">Phone: (469) 215-1101,</a> &nbsp;<a
+                  href="mailto:info@amrextherapypm.com"
+                >
+                  <span>Email:</span>
+                  info@amrextherapypm.com,</a
+                >&nbsp; <a href="fax:732-276-9878"> Fax: 732-276-9878,</a>&nbsp;
+                <a href="https://amrextherapypm.com/index.html"
+                  >amrextherapypm.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- signature modal -->
+    <div class="modal fade" id="signatureModal" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4>Add signature</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#drawsig"
+                  >Draw</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#uploadsig"
+                  >Upload</a
+                >
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="drawsig">
+                <div class="row mb-2">
+                  <div class="col-md-12">
+                    <canvas
+                      id="sig-canvas"
+                      height="120"
+                      style="width: 100%"
+                    ></canvas>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-danger p-2"
+                  id="sig-clearBtn"
+                >
+                  Clear
+                </button>
+              </div>
+              <div class="tab-pane fade" id="uploadsig">
+                <label>Upload File</label>
+                <input type="file" class="form-control-file" />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">
+              Save Signature
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ signature modal -->
+    <!-- Jq Files -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- Signature -->
+    <script>
+      (function () {
+        window.requestAnimFrame = (function (callback) {
+          return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimaitonFrame ||
+            function (callback) {
+              window.setTimeout(callback, 1000 / 60);
+            }
+          );
+        })();
+        var canvas = document.getElementById("sig-canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "#222222";
+        ctx.lineWidth = 4;
+        var drawing = false;
+        var mousePos = {
+          x: 0,
+          y: 0,
+        };
+        var lastPos = mousePos;
+        canvas.addEventListener(
+          "mousedown",
+          function (e) {
+            drawing = true;
+            lastPos = getMousePos(canvas, e);
+          },
+          false
+        );
+        canvas.addEventListener(
+          "mouseup",
+          function (e) {
+            drawing = false;
+          },
+          false
+        );
+        canvas.addEventListener(
+          "mousemove",
+          function (e) {
+            mousePos = getMousePos(canvas, e);
+          },
+          false
+        );
+        // Add touch event support for mobile
+        canvas.addEventListener("touchstart", function (e) {}, false);
+        canvas.addEventListener(
+          "touchmove",
+          function (e) {
+            var touch = e.touches[0];
+            var me = new MouseEvent("mousemove", {
+              clientX: touch.clientX,
+              clientY: touch.clientY,
+            });
+            canvas.dispatchEvent(me);
+          },
+          false
+        );
+        canvas.addEventListener(
+          "touchstart",
+          function (e) {
+            mousePos = getTouchPos(canvas, e);
+            var touch = e.touches[0];
+            var me = new MouseEvent("mousedown", {
+              clientX: touch.clientX,
+              clientY: touch.clientY,
+            });
+            canvas.dispatchEvent(me);
+          },
+          false
+        );
+        canvas.addEventListener(
+          "touchend",
+          function (e) {
+            var me = new MouseEvent("mouseup", {});
+            canvas.dispatchEvent(me);
+          },
+          false
+        );
+
+        function getMousePos(canvasDom, mouseEvent) {
+          var rect = canvasDom.getBoundingClientRect();
+          return {
+            x: mouseEvent.clientX - rect.left,
+            y: mouseEvent.clientY - rect.top,
+          };
+        }
+
+        function getTouchPos(canvasDom, touchEvent) {
+          var rect = canvasDom.getBoundingClientRect();
+          return {
+            x: touchEvent.touches[0].clientX - rect.left,
+            y: touchEvent.touches[0].clientY - rect.top,
+          };
+        }
+
+        function renderCanvas() {
+          if (drawing) {
+            ctx.moveTo(lastPos.x, lastPos.y);
+            ctx.lineTo(mousePos.x, mousePos.y);
+            ctx.stroke();
+            lastPos = mousePos;
+          }
+        }
+        // Prevent scrolling when touching the canvas
+        document.body.addEventListener(
+          "touchstart",
+          function (e) {
+            if (e.target == canvas) {
+              e.preventDefault();
+            }
+          },
+          false
+        );
+        document.body.addEventListener(
+          "touchend",
+          function (e) {
+            if (e.target == canvas) {
+              e.preventDefault();
+            }
+          },
+          false
+        );
+        document.body.addEventListener(
+          "touchmove",
+          function (e) {
+            if (e.target == canvas) {
+              e.preventDefault();
+            }
+          },
+          false
+        );
+        (function drawLoop() {
+          requestAnimFrame(drawLoop);
+          renderCanvas();
+        })();
+
+        function clearCanvas() {
+          canvas.width = canvas.width;
+        }
+        // Set up the UI
+        var sigText = document.getElementById("sig-dataUrl");
+        var sigImage = document.getElementById("sig-image");
+        var clearBtn = document.getElementById("sig-clearBtn");
+        clearBtn.addEventListener(
+          "click",
+          function (e) {
+            clearCanvas();
+            sigText.innerHTML = "Data URL for your signature will go here!";
+            sigImage.setAttribute("src", "");
+          },
+          false
+        );
+      })();
+    </script>
+  </body>
+</html>
